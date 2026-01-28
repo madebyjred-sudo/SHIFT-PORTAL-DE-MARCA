@@ -1,0 +1,7 @@
+{
+  "name": "Shift Portal de Marca",
+  "description": "Portal de activos de marca premium para Shift Porter Novelli con asistente inteligente Shifty.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
