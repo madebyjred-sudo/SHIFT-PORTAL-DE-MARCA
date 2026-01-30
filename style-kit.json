@@ -1,178 +1,82 @@
 {
-  "meta": {
-    "project": "Shift Portal de Marca",
-    "description": "Website Style Kit & Design System Documentation",
-    "version": "1.0.0"
+  "project_meta": {
+    "name": "Apple_Tier_Liquid_Glass_Experience",
+    "description": "A production-grade, motion-first landing page featuring physics-based 'Liquid Glass' materials, refraction, and scroll-linked storytelling.",
+    "core_philosophy": "Apple Quality: High friction, high reward. Every interaction has weight/inertia. No static elements.",
+    "tech_stack": {
+      "framework": "Next.js 14 (App Router)",
+      "styling": "Tailwind CSS",
+      "3d_engine": "React Three Fiber (R3F) + @react-three/drei",
+      "animation": "Framer Motion (layout/UI) + GSAP (complex sequencing)",
+      "scroll_physics": "Lenis (smooth scroll is mandatory)"
+    }
   },
-  "theme": {
-    "colors": {
-      "brand": {
-        "primary": {
-          "name": "Royal Blue",
-          "value": "#0047AB",
-          "variable": "--primary",
-          "usage": "Core brand energy, main actions, active states"
-        },
-        "secondary": {
-          "name": "Magenta",
-          "value": "#FF00FF",
-          "variable": "--secondary",
-          "usage": "Accent catalyst, focal points, vibration"
-        },
-        "tertiary": {
-          "name": "Navy Blue",
-          "value": "#00235E",
-          "variable": "--tertiary",
-          "usage": "Corporate base, depth, contrast, text color"
-        }
-      },
-      "surface": {
-        "base": {
-          "name": "Surface",
-          "value": "#FFFFFF",
-          "usage": "Card backgrounds, elevated elements"
-        },
-        "dim": {
-          "name": "Surface Dim",
-          "value": "#F5F5F7",
-          "usage": "Secondary backgrounds, hover states"
-        },
-        "container": {
-          "name": "Surface Container",
-          "value": "#E8EAF6",
-          "usage": "Main app background"
-        },
-        "glass": {
-          "name": "Glass",
-          "value": "rgba(255, 255, 255, 0.08)",
-          "variable": "--glass",
-          "usage": "Glassmorphism backgrounds"
-        },
-        "glassBorder": {
-          "name": "Glass Border",
-          "value": "rgba(255, 255, 255, 0.12)",
-          "variable": "--glass-border",
-          "usage": "Borders on glass elements"
-        }
-      },
-      "text": {
-        "primary": {
-          "name": "On Surface",
-          "value": "#00235E",
-          "usage": "Primary text color"
-        }
-      }
+  "design_system": {
+    "visual_language": "Liquid Glass & Refraction",
+    "color_palette": {
+      "background": "#000000",
+      "glass_tint": "rgba(255, 255, 255, 0.1)",
+      "text_primary": "#F5F5F7",
+      "accent_glow": "#2997FF"
     },
     "typography": {
-      "fonts": {
-        "display": {
-          "name": "Glitz",
-          "family": "'Glitz', sans-serif",
-          "usage": "Headlines of High Impact (+48px), brand personality"
-        },
-        "structure": {
-          "name": "Figtree",
-          "family": "'Figtree', sans-serif",
-          "usage": "Section Titles, Navigation, UI Elements, Buttons"
-        },
-        "body": {
-          "name": "Fira Sans",
-          "family": "'Fira Sans', sans-serif",
-          "usage": "Long form reading, body copy (Mozilla Text)"
-        }
-      },
-      "philosophy": "Echo & Resonance - Layouts built on Fibonacci Grid and Golden Ratio (1.618)."
-    },
-    "shadows": {
-      "elevation-1": "0 1px 2px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.15)",
-      "elevation-2": "0 1px 2px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.15)",
-      "elevation-3": "0 4px 8px rgba(0,0,0,0.3), 0 6px 20px rgba(0,0,0,0.15)"
+      "font_family": "SF Pro Display, Inter, or Geist Sans",
+      "weights": ["Light (300)", "Medium (500)"],
+      "rendering": "antialiased subpixel-antialiased"
     }
   },
-  "components": {
-    "buttons": {
-      "common": {
-        "shape": "rounded-full",
-        "font": "Figtree (Medium)",
-        "interaction": "Ripple effect on click, scale down on active",
-        "transition": "all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]"
-      },
-      "variants": {
-        "filled": {
-          "background": "var(--primary)",
-          "text": "#FFFFFF",
-          "hover": "bg-primary/90, shadow-elevation-2"
-        },
-        "outlined": {
-          "background": "transparent",
-          "border": "1px solid var(--primary)",
-          "text": "var(--primary)",
-          "hover": "bg-primary/5"
-        },
-        "text": {
-          "background": "transparent",
-          "text": "var(--primary)",
-          "hover": "bg-primary/5"
-        },
-        "elevated": {
-          "background": "#FFFFFF",
-          "text": "var(--primary)",
-          "shadow": "elevation-1",
-          "hover": "bg-surface-dim, shadow-elevation-2"
-        }
-      },
-      "sizes": {
-        "small": {
-          "height": "32px (h-8)",
-          "padding": "0 16px (px-4)",
-          "textSize": "0.875rem (text-sm)"
-        },
-        "medium": {
-          "height": "40px (h-10)",
-          "padding": "0 24px (px-6)",
-          "textSize": "1rem (text-base)"
-        },
-        "large": {
-          "height": "56px (h-14)",
-          "padding": "0 32px (px-8)",
-          "textSize": "1.125rem (text-lg)"
-        }
+  "key_components": {
+    "GlobalCanvas": {
+      "description": "A full-screen R3F Canvas that sits behind the UI (z-index: 0).",
+      "settings": {
+        "dpr": [1, 2],
+        "gl": { "antialias": true, "alpha": true, "powerPreference": "high-performance" }
       }
     },
-    "cards": {
-      "glass": {
-        "background": "var(--glass)",
-        "backdropFilter": "blur(12px)",
-        "border": "1px solid var(--glass-border)"
+    "Hero_Liquid_Object": {
+      "type": "3D Mesh (Torus or Abstract Blob)",
+      "material_logic": "MUST use 'MeshTransmissionMaterial' from @react-three/drei.",
+      "material_settings": {
+        "backside": true,
+        "samples": 16,
+        "resolution": 1024,
+        "transmission": 1,
+        "roughness": 0.0,
+        "thickness": 3.5,
+        "ior": 1.5,
+        "chromaticAberration": 0.06,
+        "anisotropy": 0.1,
+        "distortion": 0.5,
+        "distortionScale": 0.3,
+        "temporalDistortion": 0.1
       },
-      "glassDark": {
-        "background": "rgba(0, 0, 0, 0.2)",
-        "backdropFilter": "blur(16px)",
-        "border": "1px solid rgba(255, 255, 255, 0.1)"
+      "interaction": "The object slowly rotates and distorts on its own. On scroll, it morphs or moves to the side."
+    },
+    "Glass_UI_Panel": {
+      "type": "2D Overlay Component",
+      "style_logic": "Does NOT use simple backdrop-filter: blur(). Instead, uses a custom SVG filter for 'edge melt'.",
+      "css_implementation": {
+        "backdrop-filter": "blur(20px) saturate(180%)",
+        "background": "rgba(255, 255, 255, 0.05)",
+        "border": "1px solid rgba(255, 255, 255, 0.1)",
+        "box-shadow": "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+        "mask-image": "linear-gradient(to bottom, black 80%, transparent 100%)"
       }
     }
   },
-  "animations": {
-    "float": {
-      "description": "Vertical floating motion",
-      "duration": "6s",
-      "timing": "ease-in-out infinite"
+  "animation_architecture": {
+    "Scroll_Controller": {
+      "library": "Framer Motion useScroll + useTransform",
+      "logic": "Map scrollYProgress (0 to 1) to 3D Scene Timeline.",
+      "mapping": [
+        { "scroll": 0.0, "action": "Hero Object Centered, Title Opacity 1" },
+        { "scroll": 0.2, "action": "Hero Object scales x1.5 and moves Right. Text blurs out." },
+        { "scroll": 0.5, "action": "Glass Panel enters from bottom with spring physics." }
+      ]
     },
-    "mesh": {
-      "description": "Background gradient movement",
-      "duration": "15s",
-      "timing": "ease infinite"
-    },
-    "pulse-glow": {
-      "description": "Glowing shadow effect",
-      "duration": "2s",
-      "timing": "ease-in-out infinite",
-      "color": "rgba(255, 0, 255, 0.3-0.6)"
-    },
-    "cardStack": {
-      "description": "Entrance animation for cards",
-      "transform": "translateY(30px) -> 0, scale(0.95) -> 1",
-      "opacity": "0 -> 1"
+    "Mouse_Interaction": {
+      "logic": "The 3D Glass Object should slightly 'look at' the mouse cursor (parallax) using R3F useFrame state.mouse."
     }
-  }
+  },
+  "instruction_for_coder": "Step 1: Set up Next.js with Lenis Scroll immediately. Step 2: Create the 'Scene' component using <Canvas> and <MeshTransmissionMaterial>. Do NOT use standard <meshPhysicalMaterial> as it lacks the premium refractive quality we need. Step 3: Build the layout where HTML content floats 'above' the 3D canvas. Ensure pointer-events are managed so the user can scroll but still interact with 3D elements if needed. Use 'Leva' for debugging material properties."
 }
