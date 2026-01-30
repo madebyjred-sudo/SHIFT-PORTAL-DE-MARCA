@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Monitor, FileText, Smartphone, ArrowRight, Star, Cloud, ExternalLink } from 'lucide-react';
-import { getOneDriveTemplates, initializeGraphClient } from '../services/graphService';
-import { useMsal, useAccount } from "@azure/msal-react";
-import { loginRequest, isSimulationMode } from '../authConfig';
+import { Download, Monitor, FileText, Smartphone, ArrowRight, Star, ExternalLink } from 'lucide-react';
 
 interface TemplateItem {
     id: string;
@@ -119,31 +116,6 @@ const CollectionSection: React.FC<CollectionProps> = ({ title, subtitle, descrip
 );
 
 const TemplatesView: React.FC = () => {
-    const [cloudTemplates, setCloudTemplates] = useState<TemplateItem[]>([]);
-    const { instance, accounts } = useMsal();
-    const account = useAccount(accounts[0] || {});
-
-    useEffect(() => {
-        const fetchTemplates = async () => {
-            try {
-                // Initialize client if not in simulation
-                if (!isSimulationMode() && account) {
-                    const response = await instance.acquireTokenSilent({
-                        ...loginRequest,
-                        account: account
-                    });
-                    initializeGraphClient(response.accessToken);
-                }
-
-                const templates = await getOneDriveTemplates();
-                setCloudTemplates(templates);
-            } catch (error) {
-                console.error("Error fetching cloud templates", error);
-            }
-        };
-        fetchTemplates();
-    }, [account, instance]);
-
     // DATA MOCKUP - COLLECTIONS
     const pptCollection = [
         {
@@ -247,23 +219,6 @@ const TemplatesView: React.FC = () => {
                     Desde la sala de juntas hasta el feed de Instagram.
                 </p>
             </motion.div>
-
-            {/* Cloud Templates Section - Only if available */}
-            {cloudTemplates.length > 0 && (
-                <>
-                    <CollectionSection
-                        title="Cloud Synchronized"
-                        subtitle="OneDrive for Business"
-                        description="Plantillas sincronizadas en vivo desde la nube. Editables directamente en Office 365 con un solo clic."
-                        icon={<Cloud size={24} className="md:w-8 md:h-8" />}
-                        items={cloudTemplates}
-                        gradient="from-[#0078D4] to-[#00A1F1]"
-                        delay={0.1}
-                    />
-                    {/* Divider */}
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-8 md:my-12" />
-                </>
-            )}
 
             {/* Collection 1: Presentations */}
             <CollectionSection
