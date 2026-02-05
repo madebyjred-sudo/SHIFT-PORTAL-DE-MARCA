@@ -125,7 +125,9 @@ const AssetsDashboard: React.FC<AssetsDashboardProps> = ({ currentView, onNaviga
                 // Combine Local Assets with Mock Assets (excluding mock logos if we have real ones, or just show all)
                 // Prioritize Local Assets
                 const defaultAssets = [...localAssets, ...MOCK_ASSETS];
-                let displayAssets = showCloudAssets ? oneDriveAssets : defaultAssets;
+
+                // Merge cloud assets if available, but ALWAYS keep local assets
+                let displayAssets = showCloudAssets ? [...defaultAssets, ...oneDriveAssets] : defaultAssets;
 
                 // Apply Collection Filter
                 if (selectedCollection) {
@@ -138,7 +140,7 @@ const AssetsDashboard: React.FC<AssetsDashboardProps> = ({ currentView, onNaviga
                 return (
                     <>
                         {/* Collections Grid - Show only when not filtering or searching (simplified) */}
-                        {!selectedCollection && !isLoadingCloud && localCollections.length > 0 && (
+                        {!selectedCollection && defaultAssets.length > 0 && (
                             <div className="mb-12">
                                 <h2 className="text-2xl font-bold mb-6 text-gray-900">Colecciones</h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

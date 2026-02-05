@@ -80,7 +80,7 @@ export const MOCK_ASSETS = [
     type: 'logo',
     format: 'SVG',
     size: '12KB',
-    previewUrl: 'https://picsum.photos/id/20/400/300',
+    previewUrl: '/ASSETS/LOGO/FULL COLOR/SVG/logo-FULL_1.svg',
   },
   {
     id: '2',
@@ -88,7 +88,7 @@ export const MOCK_ASSETS = [
     type: 'logo',
     format: 'PNG',
     size: '240KB',
-    previewUrl: 'https://picsum.photos/id/24/400/300',
+    previewUrl: '/ASSETS/LOGO/1 TINTA/SVG/logo-reduced.svg',
   },
   {
     id: '3',
@@ -96,7 +96,7 @@ export const MOCK_ASSETS = [
     type: 'video',
     format: 'MP4',
     size: '15MB',
-    previewUrl: 'https://picsum.photos/id/48/400/300',
+    previewUrl: '/ASSETS/MOTION/RESONANCIAmp4.mp4',
   },
   {
     id: '4',
@@ -104,7 +104,7 @@ export const MOCK_ASSETS = [
     type: 'template',
     format: 'PPTX',
     size: '18MB',
-    previewUrl: 'https://picsum.photos/id/60/400/300',
+    previewUrl: '/templates/thumb_master_v2.png',
   },
   {
     id: '5',
@@ -112,7 +112,7 @@ export const MOCK_ASSETS = [
     type: 'icon',
     format: 'SVG',
     size: '1.2MB',
-    previewUrl: 'https://picsum.photos/id/75/400/300',
+    previewUrl: '/ASSETS/ICONS/CONSULTING/1.png',
   },
   {
     id: '6',
@@ -120,7 +120,7 @@ export const MOCK_ASSETS = [
     type: 'graphic',
     format: 'AI',
     size: '45MB',
-    previewUrl: 'https://picsum.photos/id/82/400/300',
+    previewUrl: '/Fibonacci_spiral.svg',
   },
   {
     id: '7',
@@ -128,7 +128,7 @@ export const MOCK_ASSETS = [
     type: 'document',
     format: 'PDF',
     size: '8MB',
-    previewUrl: 'https://picsum.photos/id/91/400/300',
+    previewUrl: '/templates/thumb_new_presentation.png',
   },
   {
     id: '8',
@@ -136,6 +136,6 @@ export const MOCK_ASSETS = [
     type: 'template',
     format: 'PSD',
     size: '120MB',
-    previewUrl: 'https://picsum.photos/id/119/400/300',
+    previewUrl: '/templates/thumb_pitch_v2.png',
   },
 ] as const;

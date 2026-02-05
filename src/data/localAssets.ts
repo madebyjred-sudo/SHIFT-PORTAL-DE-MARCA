@@ -11,7 +11,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.090Z",
+        "modified": "2026-02-05T21:40:30.388Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/1.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/1.png",
@@ -36,7 +36,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.090Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/10.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/10.png",
@@ -61,7 +61,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.090Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/11.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/11.png",
@@ -86,7 +86,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/12.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/12.png",
@@ -111,7 +111,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/13.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/13.png",
@@ -136,7 +136,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/14.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/14.png",
@@ -161,7 +161,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/15.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/15.png",
@@ -186,7 +186,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/16.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/16.png",
@@ -211,7 +211,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/17.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/17.png",
@@ -236,7 +236,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/18.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/18.png",
@@ -261,7 +261,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/19.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/19.png",
@@ -286,7 +286,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/2.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/2.png",
@@ -311,7 +311,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/3.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/3.png",
@@ -336,7 +336,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/4.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/4.png",
@@ -361,7 +361,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/5.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/5.png",
@@ -386,7 +386,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/6.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/6.png",
@@ -411,7 +411,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/7.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/7.png",
@@ -436,7 +436,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/8.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/8.png",
@@ -461,7 +461,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/CONSULTING/9.png",
         "downloadUrl": "/ASSETS/ICONS/CONSULTING/9.png",
@@ -486,7 +486,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/1.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/1.png",
@@ -511,7 +511,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/10.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/10.png",
@@ -536,7 +536,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/11.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/11.png",
@@ -561,7 +561,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/12.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/12.png",
@@ -586,7 +586,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/13.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/13.png",
@@ -611,7 +611,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/14.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/14.png",
@@ -636,7 +636,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/2.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/2.png",
@@ -661,7 +661,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/3.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/3.png",
@@ -686,7 +686,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/4.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/4.png",
@@ -711,7 +711,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/5.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/5.png",
@@ -736,7 +736,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/6.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/6.png",
@@ -761,7 +761,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/7.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/7.png",
@@ -786,7 +786,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/8.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/8.png",
@@ -811,7 +811,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/EXPERT/9.png",
         "downloadUrl": "/ASSETS/ICONS/EXPERT/9.png",
@@ -836,7 +836,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/1.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/1.png",
@@ -861,7 +861,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/10.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/10.png",
@@ -886,7 +886,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/11.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/11.png",
@@ -911,7 +911,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/12.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/12.png",
@@ -936,7 +936,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/13.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/13.png",
@@ -961,7 +961,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/14.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/14.png",
@@ -986,7 +986,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/15.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/15.png",
@@ -1011,7 +1011,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/16.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/16.png",
@@ -1036,7 +1036,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/17.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/17.png",
@@ -1061,7 +1061,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/18.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/18.png",
@@ -1086,7 +1086,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/19.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/19.png",
@@ -1111,7 +1111,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/2.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/2.png",
@@ -1136,7 +1136,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/20.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/20.png",
@@ -1161,7 +1161,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/21.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/21.png",
@@ -1186,7 +1186,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/22.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/22.png",
@@ -1211,7 +1211,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/3.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/3.png",
@@ -1236,7 +1236,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/4.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/4.png",
@@ -1261,7 +1261,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/5.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/5.png",
@@ -1286,7 +1286,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/6.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/6.png",
@@ -1311,7 +1311,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/7.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/7.png",
@@ -1336,7 +1336,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/8.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/8.png",
@@ -1361,7 +1361,7 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/ICONS/GROWTH/9.png",
         "downloadUrl": "/ASSETS/ICONS/GROWTH/9.png",
@@ -1386,7 +1386,7 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/LOGO MOTION SHIFT.mp4",
         "downloadUrl": "/ASSETS/LOGO/LOGO MOTION SHIFT.mp4",
@@ -1412,7 +1412,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/1 TINTA/THUMBNAILS/PNG/logo-FULL_3.png",
         "downloadUrl": "/ASSETS/LOGO/1 TINTA/SVG/logo-FULL.svg",
@@ -1438,7 +1438,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/1 TINTA/THUMBNAILS/PNG/logo-compact_1.png",
         "downloadUrl": "/ASSETS/LOGO/1 TINTA/SVG/logo-compact.svg",
@@ -1464,7 +1464,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/1 TINTA/THUMBNAILS/PNG/logo-mark_1.png",
         "downloadUrl": "/ASSETS/LOGO/1 TINTA/SVG/logo-mark.svg",
@@ -1490,7 +1490,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/1 TINTA/THUMBNAILS/PNG/logo-reduced_3.png",
         "downloadUrl": "/ASSETS/LOGO/1 TINTA/SVG/logo-reduced.svg",
@@ -1516,7 +1516,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/2 TINTAS/THUMBNAILS/PNG/logo-FULL_3.png",
         "downloadUrl": "/ASSETS/LOGO/2 TINTAS/SVG/logo-FULL.svg",
@@ -1542,7 +1542,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.393Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/2 TINTAS/THUMBNAILS/PNG/logo-compact_1.png",
         "downloadUrl": "/ASSETS/LOGO/2 TINTAS/SVG/logo-compact.svg",
@@ -1568,7 +1568,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/2 TINTAS/THUMBNAILS/PNG/logo-mark_1.png",
         "downloadUrl": "/ASSETS/LOGO/2 TINTAS/SVG/logo-mark.svg",
@@ -1594,7 +1594,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/2 TINTAS/THUMBNAILS/PNG/logo-reduced_3.png",
         "downloadUrl": "/ASSETS/LOGO/2 TINTAS/SVG/logo-reduced.svg",
@@ -1620,7 +1620,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.091Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/FULL COLOR/THUMBNAILS/PNG/logo-FULL_2.png",
         "downloadUrl": "/ASSETS/LOGO/FULL COLOR/SVG/logo-FULL_1.svg",
@@ -1646,7 +1646,7 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.092Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/LOGO/FULL COLOR/THUMBNAILS/PNG/logo-reduced_2.png",
         "downloadUrl": "/ASSETS/LOGO/FULL COLOR/SVG/logo-reduced_1.svg",
@@ -1671,7 +1671,7 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.092Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/MOTION/ESPIRAL SHIFT PN.mp4",
         "downloadUrl": "/ASSETS/MOTION/ESPIRAL SHIFT PN.mp4",
@@ -1696,7 +1696,7 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.092Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/MOTION/LOGO MOTION SHIFT.mp4",
         "downloadUrl": "/ASSETS/MOTION/LOGO MOTION SHIFT.mp4",
@@ -1721,7 +1721,7 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.092Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/MOTION/RESONANCIAmp4.mp4",
         "downloadUrl": "/ASSETS/MOTION/RESONANCIAmp4.mp4",
@@ -1746,7 +1746,7 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.092Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/MOTION/TWIST SHIFT PN.mp4",
         "downloadUrl": "/ASSETS/MOTION/TWIST SHIFT PN.mp4",
@@ -1771,7 +1771,7 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-01-23T23:03:49.092Z",
+        "modified": "2026-02-05T21:40:30.394Z",
         "owner": "Local",
         "previewUrl": "/ASSETS/MOTION/WAVES SHIFT PN.mp4",
         "downloadUrl": "/ASSETS/MOTION/WAVES SHIFT PN.mp4",
