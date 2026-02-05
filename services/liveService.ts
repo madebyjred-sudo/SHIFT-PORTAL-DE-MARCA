@@ -20,7 +20,7 @@ export class ShiftVoiceClient {
         this.ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
     }
 
-    async connect(onAudioData: (isPlaying: boolean) => void, onClose: () => void) {
+    async connect(onAudioData: (isPlaying: boolean) => void, onTextData: (text: string) => void, onClose: () => void) {
         this.closeCallback = onClose;
         this.inputContext = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: INPUT_SAMPLE_RATE });
         this.outputContext = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: OUTPUT_SAMPLE_RATE });
@@ -45,16 +45,28 @@ export class ShiftVoiceClient {
                     },
                     onmessage: async (message: LiveServerMessage) => {
                         // Handle Audio Output
-                        const base64Audio = message.serverContent?.modelTurn?.parts[0]?.inlineData?.data;
+                        const base64Audio = message.serverContent?.modelTurn?.parts?.find(p => p.inlineData)?.inlineData?.data;
                         if (base64Audio) {
                             onAudioData(true); // Signal UI that AI is speaking
                             await this.playAudioChunk(base64Audio);
                         }
 
+                        // Handle Text Output (CC / Transcripts) - STRICT FILTERING
+                        // We only want 'text' parts that are not marked as 'thought' or similar internal reasoning
+                        const textParts = message.serverContent?.modelTurn?.parts
+                            ?.filter(p => p.text && !(p as any).thought)
+                            .map(p => p.text);
+
+                        if (textParts && textParts.length > 0) {
+                            onTextData(textParts.join(' '));
+                        }
+
                         // Handle Interruptions
                         if (message.serverContent?.interrupted) {
+                            console.log("Shifty Live: Interruption detected by server");
                             this.nextStartTime = 0; // Reset buffer cursor
                             onAudioData(false);
+                            onTextData(""); // Clear CC on interrupt
                         }
                     },
                     onclose: () => {

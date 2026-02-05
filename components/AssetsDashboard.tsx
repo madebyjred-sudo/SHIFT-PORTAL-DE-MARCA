@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import AssetCard from './AssetCard';
 import GuidelinesView from './GuidelinesView';
 import TemplatesView from './TemplatesView';
+import ManifestoView from './ManifestoView';
 import { Asset, ViewType } from '../types';
 import { Bell, Filter, ChevronDown, Plus, Download, X, Cloud, HardDrive, Loader2 } from 'lucide-react';
 import { MOCK_ASSETS } from '../constants';
@@ -16,15 +17,28 @@ import { getOneDriveAssets, initializeGraphClient } from '../services/graphServi
 
 interface AssetsDashboardProps {
     currentView: ViewType;
-    onNavigate: (view: ViewType) => void;
+    onNavigate: (view: ViewType, params?: any) => void;
     onOpenChat: () => void;
+    params?: {
+        category?: string;
+        assetId?: string;
+        scrollTo?: string;
+    };
 }
 
 type DataSource = 'local' | 'onedrive';
 
-const AssetsDashboard: React.FC<AssetsDashboardProps> = ({ currentView, onNavigate, onOpenChat }) => {
+const AssetsDashboard: React.FC<AssetsDashboardProps> = ({ currentView, onNavigate, onOpenChat, params }) => {
     const [selectedAssets, setSelectedAssets] = useState<Set<string>>(new Set());
     const [selectedCollection, setSelectedCollection] = useState<string | null>(null);
+
+    // Effect to handle params
+    useEffect(() => {
+        if (params?.category) {
+            setSelectedCollection(params.category);
+        }
+        // Could handle assetId or scrolling here too
+    }, [params]);
 
     // MSAL Hooks
     const { instance, accounts } = useMsal();
@@ -104,6 +118,8 @@ const AssetsDashboard: React.FC<AssetsDashboardProps> = ({ currentView, onNaviga
                 return <GuidelinesView />;
             case 'templates':
                 return <TemplatesView />;
+            case 'manifesto':
+                return <ManifestoView onNavigate={onNavigate} />;
             case 'assets':
             default:
                 // Combine Local Assets with Mock Assets (excluding mock logos if we have real ones, or just show all)
@@ -256,11 +272,20 @@ const AssetsDashboard: React.FC<AssetsDashboardProps> = ({ currentView, onNaviga
                         <p className="text-xs lg:text-sm text-gray-500 hidden sm:block">{headerInfo.subtitle}</p>
                     </div>
                     <div className="flex items-center gap-2 lg:gap-4">
-                        <button className="p-2.5 lg:p-3 rounded-full bg-white/50 hover:bg-white transition-colors text-gray-600 shadow-sm active:scale-95">
+                        <a
+                            href="https://teams.microsoft.com/l/channel/19%3ADhG42dauuHnpdN2TFZ5rrfQB0DTWGQFcK4c3zRoAYAI1%40thread.tacv2/Updates?groupId=198602e1-483c-4d59-862f-70cf1c8f7978&tenantId=6220c548-8b15-4258-ba64-21d1abe8e727"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2.5 lg:p-3 rounded-full bg-white/50 hover:bg-white transition-colors text-gray-600 shadow-sm active:scale-95"
+                            title="Ver actualizaciones en Teams"
+                        >
                             <Bell size={18} className="lg:w-5 lg:h-5" />
-                        </button>
+                        </a>
                         {currentView === 'assets' && (
-                            <button className="hidden sm:flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 bg-primary text-white rounded-full font-medium shadow-lg shadow-primary/30 hover:shadow-primary/40 hover:-translate-y-0.5 active:scale-95 transition-all text-sm lg:text-base">
+                            <button
+                                onClick={() => window.location.href = "mailto:juan.rojas@shiftpn.co.cr?subject=Solicitud de assets"}
+                                className="hidden sm:flex items-center gap-2 px-4 lg:px-5 py-2 lg:py-2.5 bg-primary text-white rounded-full font-medium shadow-lg shadow-primary/30 hover:shadow-primary/40 hover:-translate-y-0.5 active:scale-95 transition-all text-sm lg:text-base"
+                            >
                                 <Plus size={16} className="lg:w-[18px] lg:h-[18px]" />
                                 <span>Solicitar</span>
                             </button>
@@ -278,7 +303,7 @@ const AssetsDashboard: React.FC<AssetsDashboardProps> = ({ currentView, onNaviga
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 100, opacity: 0 }}
-                            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 p-2 pl-6 pr-2 bg-tertiary text-white rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.3)] border border-white/10"
+                            className="fixed bottom-24 lg:bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 p-2 pl-6 pr-2 bg-tertiary text-white rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.3)] border border-white/10"
                         >
                             <div className="flex items-center gap-2">
                                 <span className="font-bold text-lg">{selectedAssets.size}</span>

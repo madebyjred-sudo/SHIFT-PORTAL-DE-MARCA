@@ -2,82 +2,10 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Copy, Check, Type, Droplet, Layout, Palette, Scaling, Ratio, BoxSelect, FileText, Monitor, Calculator, ArrowDown, Download, ExternalLink, PieChart, Sparkles } from 'lucide-react';
 import { BRAND_COLORS } from '../constants';
+import { ColorSwatch } from './ColorSwatch';
+import { CopyTrigger } from './CopyTrigger';
 
-// --- Utility Component for Copy Animation ---
-const CopyTrigger: React.FC<{ value: string; children: React.ReactNode; className?: string }> = ({ value, children, className = "" }) => {
-    const [copied, setCopied] = useState(false);
-
-    const handleCopy = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        navigator.clipboard.writeText(value);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
-    };
-
-    return (
-        <div
-            onClick={handleCopy}
-            className={`relative cursor-pointer select-none group/copy ${className}`}
-            title={`Copiar: ${value}`}
-        >
-            {children}
-            <AnimatePresence>
-                {copied && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                        animate={{ opacity: 1, y: -30, scale: 1 }}
-                        exit={{ opacity: 0, y: -15, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute left-1/2 -translate-x-1/2 top-0 bg-gray-900 text-white text-[10px] font-bold py-1 px-3 rounded-full whitespace-nowrap z-50 pointer-events-none shadow-lg flex items-center gap-1.5"
-                    >
-                        <Check size={10} className="text-green-400" />
-                        Valor copiado
-                        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45" />
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
-    );
-};
-
-const ColorSwatch: React.FC<{ color: string; name: string; hex: string; label?: string }> = ({ color, name, hex, label }) => {
-    const [copied, setCopied] = useState(false);
-
-    const handleCopy = () => {
-        navigator.clipboard.writeText(hex);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-    };
-
-    return (
-        <motion.div
-            whileHover={{ y: -5, scale: 1.02 }}
-            className="group cursor-pointer"
-            onClick={handleCopy}
-        >
-            <div
-                className="h-24 rounded-2xl shadow-sm border border-black/5 relative overflow-hidden mb-3 transition-shadow group-hover:shadow-xl"
-                style={{ backgroundColor: hex }}
-            >
-                <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div className="bg-white/20 backdrop-blur-md p-2 rounded-full text-white">
-                        {copied ? <Check size={20} /> : <Copy size={20} />}
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-col">
-                <div className="flex justify-between items-start">
-                    <h4 className="font-bold text-gray-800 text-sm leading-tight">{name}</h4>
-                    {copied && <span className="text-[10px] text-green-600 font-bold">✓</span>}
-                </div>
-                <div className="flex justify-between items-center mt-1">
-                    <p className="text-[10px] text-gray-400 font-mono uppercase">{hex}</p>
-                    {label && <span className="text-[9px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded border border-gray-200">{label}</span>}
-                </div>
-            </div>
-        </motion.div>
-    );
-};
+// Shared components ColorSwatch and CopyTrigger have been moved to their own files
 
 const ColorDistribution: React.FC = () => {
     // Data definition with explicit percentages
@@ -784,10 +712,10 @@ const LogoSystem: React.FC = () => {
                                                 key={idx}
                                                 onClick={() => setActiveIndex(idx)}
                                                 className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIndex
-                                                        ? 'bg-secondary scale-150'
-                                                        : idx < activeIndex
-                                                            ? 'bg-primary'
-                                                            : 'bg-white/20 hover:bg-white/40'
+                                                    ? 'bg-secondary scale-150'
+                                                    : idx < activeIndex
+                                                        ? 'bg-primary'
+                                                        : 'bg-white/20 hover:bg-white/40'
                                                     }`}
                                             />
                                         ))}
@@ -1003,8 +931,8 @@ const LogoSystem: React.FC = () => {
                                             key={color.hex}
                                             onClick={() => setSelectedColor(color.hex)}
                                             className={`relative w-12 h-12 rounded-xl ${color.bgClass} transition-all duration-200 ${selectedColor === color.hex
-                                                    ? 'ring-2 ring-offset-2 ring-secondary scale-110'
-                                                    : 'hover:scale-105'
+                                                ? 'ring-2 ring-offset-2 ring-secondary scale-110'
+                                                : 'hover:scale-105'
                                                 }`}
                                             title={color.name}
                                         >

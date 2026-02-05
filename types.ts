@@ -1,6 +1,16 @@
 import React from 'react';
 
-export type ViewType = 'home' | 'assets' | 'guidelines' | 'templates';
+export type ViewType = 'home' | 'assets' | 'guidelines' | 'templates' | 'manifesto';
+
+export interface NavigationParams {
+  view: ViewType;
+  params?: {
+    category?: string;
+    assetId?: string;
+    scrollTo?: string;
+    query?: string;
+  };
+}
 
 export interface Asset {
   id: string;

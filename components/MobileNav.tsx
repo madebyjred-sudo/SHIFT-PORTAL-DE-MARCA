@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Home, Layers, FileText, Layout, Sparkles } from 'lucide-react';
+import { Home, Layers, FileText, Layout } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 import { ViewType } from '../types';
 
 interface MobileNavProps {
@@ -80,18 +81,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ currentView, onNavigate, onOpenCh
                         whileTap={{ scale: 0.9 }}
                         whileHover={{ scale: 1.05 }}
                     >
-                        <motion.div
-                            animate={{
-                                boxShadow: [
-                                    "0 0 0 0 rgba(255,0,255,0.4)",
-                                    "0 0 0 8px rgba(255,0,255,0)",
-                                ]
-                            }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                            className="w-10 h-10 rounded-2xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center shadow-lg shadow-secondary/30"
-                        >
-                            <Sparkles size={18} className="text-white" />
-                        </motion.div>
+                        <img src="/shift-reduced.svg" alt="Shifty" className="h-6 w-auto mb-0.5 brightness-0 invert" />
                         <span className="text-[10px] font-bold mt-1 text-secondary">
                             Shifty
                         </span>

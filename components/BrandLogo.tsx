@@ -59,9 +59,9 @@ const BrandLogo: React.FC<BrandLogoProps> = ({
                 transformOrigin: 'left center'
             }}
         >
-            <div className={`w-8 h-8 rounded-xl flex items-center justify-center shadow-sm ${variant === 'white'
-                ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white'
-                : 'bg-gradient-to-br from-primary to-secondary text-white'
+            <div className={`flex items-center justify-center ${variant === 'white'
+                ? 'text-white'
+                : 'w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-sm'
                 }`}>
                 <span className="font-bold text-lg">S</span>
             </div>

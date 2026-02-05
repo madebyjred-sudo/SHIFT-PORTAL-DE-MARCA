@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 const ResonanceWaves: React.FC = () => {
   return (
     <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 900" preserveAspectRatio="none">
-        <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.1" />
-                <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.1" />
-            </linearGradient>
-        </defs>
+      <defs>
+        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.1" />
+          <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.1" />
+        </linearGradient>
+      </defs>
       {[0, 1, 2].map((i) => (
         <motion.path
           key={i}
@@ -32,7 +32,7 @@ const ResonanceWaves: React.FC = () => {
           }}
         />
       ))}
-       {[0, 1].map((i) => (
+      {[0, 1].map((i) => (
         <motion.path
           key={`curve-${i}`}
           d="M0,500 C400,600 1000,300 1440,500"

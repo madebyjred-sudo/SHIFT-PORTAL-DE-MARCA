@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Home, Layers, LayoutTemplate, Type, Settings, User, Sparkles, LogOut } from 'lucide-react';
+import { Home, Layers, LayoutTemplate, Type, Settings, User, LogOut, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ViewType } from '../types';
 import BrandLogo from './BrandLogo';
 import { useMsal, useAccount } from "@azure/msal-react";
 import { loginRequest, isSimulationMode } from '../authConfig';
 import { initializeGraphClient, getUserProfilePhoto } from '../services/graphService';
+import { useSearch } from '../context/SearchContext';
+import SearchResults from './SearchResults';
 
 interface SidebarProps {
     currentView: ViewType;
@@ -17,6 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate, onOpenChat }
     const { instance, accounts } = useMsal();
     const account = useAccount(accounts[0] || {});
     const [userPhoto, setUserPhoto] = useState<string | null>(null);
+    const { query, setQuery } = useSearch();
 
     const handleLogin = () => {
         if (isSimulationMode()) {
@@ -49,9 +52,10 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate, onOpenChat }
     }, [account, instance]);
     const menuItems = [
         { icon: <Home size={20} />, label: 'Inicio', id: 'home' as ViewType },
+        { icon: <Zap size={20} />, label: 'Manifiesto', id: 'manifesto' as ViewType },
+        { icon: <Type size={20} />, label: 'Guías', id: 'guidelines' as ViewType },
         { icon: <Layers size={20} />, label: 'Todos los Assets', id: 'assets' as ViewType },
         { icon: <LayoutTemplate size={20} />, label: 'Plantillas', id: 'templates' as ViewType },
-        { icon: <Type size={20} />, label: 'Guías', id: 'guidelines' as ViewType },
     ];
 
     return (
@@ -67,15 +71,18 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate, onOpenChat }
                     <BrandLogo variant="color" isIso={true} />
                 </div>
 
-                <div className="relative">
+                <div className="relative z-50">
                     <input
                         type="text"
+                        value={query || ''}
+                        onChange={(e) => setQuery(e.target.value)}
                         placeholder="Buscar assets..."
                         className="w-full bg-white/50 border border-white/40 rounded-2xl py-3 px-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white/80 transition-all placeholder:text-gray-400"
                     />
                     <svg className="absolute left-3.5 top-3.5 text-gray-400" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
+                    <SearchResults onNavigate={onNavigate} />
                 </div>
             </div>
 
@@ -122,9 +129,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate, onOpenChat }
 
                     {/* Content */}
                     <div className="relative z-10 flex items-center gap-3">
-                        <div className="bg-white/20 p-1 rounded-lg">
-                            <Sparkles size={18} className="text-white" />
-                        </div>
+                        <img src="/shift-reduced.svg" alt="Shifty" className="h-5 w-auto brightness-0 invert" />
                         <span>Asistente Shifty</span>
                     </div>
 

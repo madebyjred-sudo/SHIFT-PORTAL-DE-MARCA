@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useDragControls } from 'framer-motion';
-import { X, Send, AudioWaveform, Mic, RotateCcw, ChevronDown, Sparkles, ArrowRight, ExternalLink } from 'lucide-react';
+import { X, Send, AudioWaveform, Mic, RotateCcw, ChevronDown, Sparkles, ArrowRight, ExternalLink, Paperclip, Copy, Check } from 'lucide-react';
 import { GenerateContentResponse } from "@google/genai";
 import ReactMarkdown from 'react-markdown';
 import { sendMessageStream } from '../services/geminiService';
 import { ShiftVoiceClient } from '../services/liveService';
 import { ChatMessage, ViewType } from '../types';
 import BrandLogo from './BrandLogo';
+import { ColorSwatch } from './ColorSwatch';
 
 interface ChatBotProps {
   isOpen: boolean;
@@ -28,19 +29,49 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
   const [isLoading, setIsLoading] = useState(false);
   const [isVoiceMode, setIsVoiceMode] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [transcript, setTranscript] = useState("");
+  const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatRef = useRef<HTMLDivElement>(null);
-  const voiceClientRef = useRef<ShiftVoiceClient | null>(null);
+  const voiceClient = useRef<ShiftVoiceClient | null>(null); // Consolidated voice client ref
   const dragControls = useDragControls();
+
+  const [navToast, setNavToast] = useState<string | null>(null);
 
   // Handle deep linking navigation
   const handleDeepLink = (href: string) => {
     if (href.startsWith('shift://') && onNavigate) {
-      const view = href.replace('shift://', '') as ViewType;
-      onNavigate(view);
-      if (window.innerWidth < 768) {
-        setIsOpen(false);
+      let view = href.replace('shift://', '').toLowerCase() as string;
+
+      // Robust Mapping for Spanish/English variants
+      const viewMap: Record<string, ViewType> = {
+        'home': 'home',
+        'inicio': 'home',
+        'assets': 'assets',
+        'recursos': 'assets',
+        'logos': 'assets',
+        'guidelines': 'guidelines',
+        'guias': 'guidelines',
+        'guías': 'guidelines',
+        'templates': 'templates',
+        'plantillas': 'templates',
+        'manifesto': 'manifesto',
+        'manifiesto': 'manifesto'
+      };
+
+      const finalView = viewMap[view];
+
+      if (finalView && onNavigate) {
+        onNavigate(finalView);
+        // Show visual feedback
+        const displayName = finalView.charAt(0).toUpperCase() + finalView.slice(1);
+        setNavToast(viewMap[view] === 'home' ? 'Inicio' : displayName);
+        setTimeout(() => setNavToast(null), 3000);
+
+        if (window.innerWidth < 768) {
+          setIsOpen(false);
+        }
       }
     } else {
       window.open(href, '_blank');
@@ -84,76 +115,75 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
     if (!isOpen && isVoiceMode) {
       toggleVoiceMode();
     }
-  }, [isOpen]);
+  }, [isOpen, isVoiceMode]);
 
   const toggleVoiceMode = async () => {
-    if (isVoiceMode) {
-      // Turn off
-      voiceClientRef.current?.disconnect();
-      voiceClientRef.current = null;
-      setIsVoiceMode(false);
-      setIsSpeaking(false);
-    } else {
-      // Turn on
+    if (!isVoiceMode) {
       setIsVoiceMode(true);
-      voiceClientRef.current = new ShiftVoiceClient();
-      await voiceClientRef.current.connect(
-        (speaking) => setIsSpeaking(speaking), // Speaking state callback
-        () => { // Disconnect callback
-          setIsVoiceMode(false);
-          setIsSpeaking(false);
-          voiceClientRef.current = null;
-        }
+      if (!voiceClient.current) voiceClient.current = new ShiftVoiceClient();
+      await voiceClient.current.connect(
+        (isPlaying) => setIsSpeaking(isPlaying),
+        (text) => {
+          setTranscript(text);
+
+          // Auto-Navigation Logic for Voice Mode
+          const validViews = ['home', 'assets', 'guidelines', 'templates', 'manifesto'];
+          const rawMatch = text.match(/shift:\/\/([a-z]+)/i);
+
+          if (rawMatch) {
+            const viewName = rawMatch[1].toLowerCase();
+            // Validate and ensure we don't trigger the same view repeatedly in the same message segment
+            if (validViews.includes(viewName)) {
+              handleDeepLink(`shift://${viewName}`);
+            }
+          }
+        },
+        () => setIsVoiceMode(false)
       );
+    } else {
+      voiceClient.current?.disconnect();
+      setIsVoiceMode(false);
+      setTranscript("");
     }
   };
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 
-    const userMsg: ChatMessage = {
-      id: Date.now().toString(),
-      role: 'user',
-      text: input
-    };
-
-    setMessages(prev => [...prev, userMsg]);
+    const userMessage: ChatMessage = { id: Date.now().toString(), role: 'user', text: input };
+    setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
     try {
-      const responseStream = await sendMessageStream(userMsg.text);
+      const responseStream = await sendMessageStream(input);
+      let modelText = '';
 
-      const botMsgId = (Date.now() + 1).toString();
-      setMessages(prev => [...prev, {
-        id: botMsgId,
-        role: 'model',
-        text: '',
-        isStreaming: true
-      }]);
-
-      let fullText = '';
+      const modelMessage: ChatMessage = { id: (Date.now() + 1).toString(), role: 'model', text: '' };
+      setMessages(prev => [...prev, modelMessage]);
 
       for await (const chunk of responseStream) {
-        const c = chunk as GenerateContentResponse;
-        const newText = c.text || '';
-        fullText += newText;
-
+        const chunkText = chunk.text || (chunk.candidates?.[0]?.content?.parts?.[0]?.text) || '';
+        modelText += chunkText;
         setMessages(prev => prev.map(msg =>
-          msg.id === botMsgId
-            ? { ...msg, text: fullText }
-            : msg
+          msg.id === modelMessage.id ? { ...msg, text: modelText } : msg
         ));
       }
-
+      // Mark as not streaming after completion
       setMessages(prev => prev.map(msg =>
-        msg.id === botMsgId
+        msg.id === modelMessage.id
           ? { ...msg, isStreaming: false }
           : msg
       ));
 
+      // Auto-Navigation Logic for Text Mode
+      const autoMatch = modelText.match(/shift:\/\/([a-z]+)/i);
+      if (autoMatch) {
+        // Small delay for better UX
+        setTimeout(() => handleDeepLink(autoMatch[0]), 800);
+      }
     } catch (error) {
-      console.error('Chat error:', error);
+      console.error("Chat Error:", error);
       setMessages(prev => [...prev, {
         id: Date.now().toString(),
         role: 'model',
@@ -162,6 +192,12 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleCopyMessage = (text: string, id: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -188,15 +224,9 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
               whileHover="hover"
               initial="initial"
             >
-              <motion.div
-                className="relative z-10"
-                variants={{
-                  initial: { rotate: 0 },
-                  hover: { rotate: 15, scale: 1.1 }
-                }}
-              >
-                <BrandLogo variant="white" showText={false} scale={1} />
-              </motion.div>
+              <div className="relative z-10">
+                <img src="/shift-reduced.svg" alt="Shift" className="h-6 w-auto brightness-0 invert" />
+              </div>
 
               <motion.span
                 variants={{
@@ -225,7 +255,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
               y: 0,
               background: isVoiceMode
                 ? "linear-gradient(135deg, #00235E 0%, #1534dc 50%, #FF00FF 100%)"
-                : "rgba(0, 16, 48, 0.85)"
+                : "linear-gradient(135deg, rgba(0, 16, 48, 0.85) 0%, rgba(0, 16, 48, 0.85) 100%)"
             }}
             exit={{ opacity: 0, y: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
@@ -249,7 +279,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                   className="drop-shadow-[0_0_8px_rgba(255,0,255,0.8)]"
                   whileTap={{ scale: 0.9 }}
                 >
-                  <BrandLogo variant="white" showText={false} scale={1} />
+                  <img src="/shift-reduced.svg" alt="Shift" className="h-7 w-auto brightness-0 invert" />
                 </motion.div>
                 <div>
                   <h3 className="font-bold text-base tracking-wide text-white drop-shadow-md">Shifty</h3>
@@ -304,6 +334,22 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                 </motion.button>
               </div>
             </div>
+            {/* Navigation Toast */}
+            <AnimatePresence>
+              {navToast && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  className="absolute top-20 left-1/2 -translate-x-1/2 z-30 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center gap-2 shadow-xl shadow-black/20"
+                >
+                  <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+                  <span className="text-xs font-bold text-white tracking-wide">
+                    Navegando a <span className="text-secondary">{navToast}</span>...
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {/* Main Content Area */}
             {isVoiceMode ? (
@@ -344,9 +390,11 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                 </div>
 
                 <h4 className="text-2xl font-bold mb-2 tracking-tight">Escuchando...</h4>
-                <p className="text-white/60 text-sm max-w-[200px]">
-                  Hablame naturalmente. Estoy conectado al sistema de marca.
-                </p>
+
+                {/* Real-time CC / Transcript Dashboard */}
+                <div className="w-full max-w-[300px] h-24 overflow-y-auto mb-6 p-3 bg-black/20 backdrop-blur-md rounded-2xl border border-white/10 text-xs text-white/60 text-left custom-scrollbar italic leading-relaxed">
+                  {transcript || "Habla ahora..."}
+                </div>
 
                 <div className="mt-12 flex gap-4">
                   <button
@@ -368,19 +416,58 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                     >
                       {msg.role === 'model' && (
                         <div className="shrink-0 mb-1 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">
-                          <BrandLogo variant="white" showText={false} className="opacity-90" scale={1} />
+                          <img src="/shift-reduced.svg" alt="Shifty" className="h-5 w-auto opacity-90 brightness-0 invert" />
                         </div>
                       )}
                       <div
-                        className={`max-w-[80%] p-4 rounded-2xl text-sm leading-relaxed backdrop-blur-md shadow-sm border ${msg.role === 'user'
+                        className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed backdrop-blur-md shadow-sm border relative group/msg ${msg.role === 'user'
                           ? 'bg-gradient-to-br from-secondary to-[#D900D9] text-white border-white/20 rounded-br-none shadow-[0_4px_15px_rgba(255,0,255,0.3)]'
                           : 'bg-white/10 text-white/90 border-white/10 rounded-bl-none shadow-[0_4px_15px_rgba(0,0,0,0.1)]'
                           }`}
                       >
+                        {/* Copy button for each bubble */}
+                        <button
+                          onClick={() => handleCopyMessage(msg.text, msg.id)}
+                          className="absolute -top-2 -right-2 p-1.5 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg opacity-0 group-hover/msg:opacity-100 transition-opacity hover:bg-black/60 z-20"
+                          title="Copiar mensaje"
+                        >
+                          {copiedId === msg.id ? <Check size={12} className="text-green-400" /> : <Copy size={12} className="text-white/70" />}
+                        </button>
+
                         {msg.role === 'model' ? (
                           <div className="markdown prose prose-sm max-w-none dark:prose-invert prose-p:text-white/90 prose-headings:text-white prose-strong:text-white prose-code:text-white/90">
                             <ReactMarkdown
                               components={{
+                                p: ({ children }) => {
+                                  // Regex to detect [swatch:#hex:name]
+                                  const swatchRegex = /\[swatch:(#[0-9A-Fa-f]{6}):([^\]]+)\]/g;
+                                  const content = React.Children.toArray(children).join('');
+
+                                  if (typeof content === 'string' && swatchRegex.test(content)) {
+                                    const parts = content.split(swatchRegex);
+                                    const renderedParts = [];
+
+                                    for (let i = 0; i < parts.length; i++) {
+                                      if (i % 3 === 0) {
+                                        // Plain text
+                                        renderedParts.push(parts[i]);
+                                      } else if (i % 3 === 1) {
+                                        // Hex color
+                                        const hex = parts[i];
+                                        const name = parts[i + 1];
+                                        renderedParts.push(
+                                          <div key={`${hex}-${i}`} className="my-4 max-w-[200px]">
+                                            <ColorSwatch hex={hex} name={name} />
+                                          </div>
+                                        );
+                                      }
+                                      // Skip name as it's handled in the hex block
+                                    }
+                                    return <div className="space-y-2">{renderedParts}</div>;
+                                  }
+
+                                  return <p className="text-white/90 mb-4">{children}</p>;
+                                },
                                 a: ({ node, href, children, ...props }) => {
                                   const isInternal = href?.startsWith('shift://');
 
@@ -424,7 +511,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                   {isLoading && (
                     <div className="flex justify-start items-end gap-3">
                       <div className="shrink-0 mb-1 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">
-                        <BrandLogo variant="white" showText={false} className="opacity-90" scale={1} />
+                        <img src="/shift-reduced.svg" alt="Shifty" className="h-5 w-auto opacity-90 brightness-0 invert" />
                       </div>
                       <div className="bg-white/5 backdrop-blur-md p-4 rounded-2xl rounded-bl-none border border-white/10 flex gap-1.5 items-center">
                         <span className="w-2 h-2 bg-white/60 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
@@ -434,30 +521,74 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                     </div>
                   )}
                   <div ref={messagesEndRef} />
+
+                  {/* Quick Actions moved inside scrollable area */}
+                  <div className="pt-4 pb-2 flex gap-2 overflow-x-auto scrollbar-hide shrink-0 pb-20">
+                    <button
+                      onClick={() => { setInput('¿Me ayudás con un copy estratégico?'); }}
+                      className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-white/80 whitespace-nowrap hover:bg-white/10 transition-colors"
+                    >
+                      📝 Ayuda con Copy
+                    </button>
+                    <button
+                      onClick={() => { setInput('¿Cuáles son los pilares de la marca Shift?'); }}
+                      className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-white/80 whitespace-nowrap hover:bg-white/10 transition-colors"
+                    >
+                      🚀 Pilares Shifty
+                    </button>
+                    <button
+                      onClick={() => { setInput('Dime los códigos de los colores de la marca'); }}
+                      className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-white/80 whitespace-nowrap hover:bg-white/10 transition-colors"
+                    >
+                      🎨 Colores
+                    </button>
+                    <button
+                      onClick={() => { setInput('¿Cómo conceptualizar "resonancia" en un diseño?'); }}
+                      className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-white/80 whitespace-nowrap hover:bg-white/10 transition-colors"
+                    >
+                      💡 Conceptualizar
+                    </button>
+                  </div>
                 </div>
 
+
                 {/* Input Area */}
-                <div className="relative z-10 p-5 pt-2 shrink-0">
-                  <div className="flex items-center gap-2 bg-black/20 backdrop-blur-xl rounded-full p-1.5 pr-2 border border-white/10 focus-within:border-white/30 focus-within:bg-black/30 transition-all shadow-inner">
+                <div className="relative z-10 p-5 pt-2 shrink-0 bg-gradient-to-t from-[#001030]/80 to-transparent">
+                  <div className="flex items-center gap-2 bg-black/40 backdrop-blur-xl rounded-2xl p-1.5 pr-2 border border-white/15 focus-within:border-white/30 focus-within:bg-black/50 transition-all shadow-inner">
+                    {/* New Chat Action */}
+                    <button
+                      onClick={startNewChat}
+                      className="p-2.5 text-white/40 hover:text-white transition-colors border-r border-white/10 mr-1"
+                      title="Reiniciar chat"
+                    >
+                      <RotateCcw size={16} />
+                    </button>
+
+                    {/* Upload File (Mock) */}
+                    <button
+                      onClick={() => alert('Función de carga de archivos próximamente')}
+                      className="p-2 text-white/40 hover:text-white transition-colors"
+                    >
+                      <Paperclip size={18} />
+                    </button>
+
                     <input
                       type="text"
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={handleKeyPress}
-                      placeholder="Preguntá sobre las guías de marca..."
-                      className="flex-1 bg-transparent px-4 py-2 text-sm focus:outline-none text-white placeholder:text-white/40"
+                      placeholder="Preguntá algo..."
+                      className="flex-1 bg-transparent px-2 py-2 text-sm focus:outline-none text-white placeholder:text-white/30"
                       disabled={isLoading}
                     />
+
                     <button
                       onClick={handleSend}
                       disabled={isLoading || !input.trim()}
-                      className="p-2.5 bg-secondary text-white rounded-full hover:bg-secondary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,0,255,0.4)]"
+                      className="p-2.5 bg-secondary text-white rounded-xl hover:bg-secondary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,0,255,0.4)]"
                     >
                       <Send size={18} />
                     </button>
-                  </div>
-                  <div className="text-center mt-3">
-                    <span className="text-[10px] text-white/30 font-medium tracking-widest uppercase">Shifty AI</span>
                   </div>
                 </div>
               </>

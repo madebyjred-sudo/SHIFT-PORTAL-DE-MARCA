@@ -10,6 +10,7 @@ interface TemplateItem {
     size: string;
     image: string;
     webUrl?: string; // URL for Cloud Editing
+    downloadUrl?: string; // Local file path for download
 }
 
 interface CollectionProps {
@@ -22,19 +23,28 @@ interface CollectionProps {
     delay: number;
 }
 
-const TemplateCard: React.FC<TemplateItem> = ({ title, description, format, image, webUrl }) => (
+const TemplateCard: React.FC<TemplateItem> = ({ title, description, format, image, webUrl, downloadUrl }) => (
     <motion.div
         whileHover={{ y: -8 }}
         className="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
     >
-        <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+        <div className="relative aspect-[16/10] overflow-hidden bg-gray-50 flex items-center justify-center">
+            {/* Soft Blurred Background */}
+            <div
+                className="absolute inset-0 opacity-20 blur-2xl scale-125"
+                style={{
+                    backgroundImage: `url(${image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }}
+            />
             <img
                 src={image}
                 alt={title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-md"
             />
             {/* Hover Actions Overlay */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3 backdrop-blur-sm">
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 flex flex-col items-center justify-center gap-3 backdrop-blur-sm z-20">
 
                 {/* Cloud Edit Button */}
                 {webUrl && (
@@ -42,17 +52,29 @@ const TemplateCard: React.FC<TemplateItem> = ({ title, description, format, imag
                         href={webUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-[#0078D4] text-white px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#106EBE] shadow-lg"
+                        className={`${webUrl.includes('pitch.com') ? 'bg-[#0078D4] hover:bg-[#106EBE]' : 'bg-[#EB1000] hover:bg-[#C40D00]'
+                            } text-white px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg`}
                     >
-                        <ExternalLink size={16} />
-                        Editar en Nube
+                        <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center shrink-0">
+                            <span className={`${webUrl.includes('pitch.com') ? 'text-[#0078D4]' : 'text-[#EB1000]'
+                                } font-black text-[10px] leading-none`} style={{ fontFamily: 'Inter, sans-serif' }}>
+                                {webUrl.includes('pitch.com') ? 'P' : 'A'}
+                            </span>
+                        </div>
+                        {webUrl.includes('pitch.com') ? 'Editar en Pitch' : 'Editar en Adobe Express'}
                     </a>
                 )}
 
-                <button className="bg-white text-tertiary px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-gray-100">
-                    <Download size={16} />
-                    Descargar
-                </button>
+                {downloadUrl && (
+                    <a
+                        href={downloadUrl}
+                        download
+                        className="bg-white text-tertiary px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-gray-100 cursor-pointer"
+                    >
+                        <Download size={16} />
+                        Descargar
+                    </a>
+                )}
             </div>
             <div className="absolute top-4 right-4">
                 <span className="bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-[10px] font-bold text-tertiary uppercase tracking-wider shadow-sm border border-white/50">
@@ -119,55 +141,64 @@ const TemplatesView: React.FC = () => {
     // DATA MOCKUP - COLLECTIONS
     const pptCollection = [
         {
-            id: 'ppt-1',
-            title: 'Master Keynote Deck',
-            description: 'La plantilla maestra para presentaciones corporativas de alto nivel. Incluye slides de datos, equipo y casos de éxito.',
+            id: 'ppt-new',
+            title: 'Nueva Presentación: Innovación Shift',
+            description: 'Nuestra propuesta más reciente para liderar la conversación en el mercado. Enfoque estratégico en IA y transformación digital.',
+            format: 'Pitch',
+            size: '14.2 MB',
+            image: '/templates/thumb_new_presentation.png',
+            webUrl: 'https://app.pitch.com/app/dashboard/6195b1fc-277e-4ef2-83b1-9315cdd23cd5/library/templates/ff00d0e3-0ef2-451e-a4aa-57a7caa11dae',
+            downloadUrl: '/templates/presentation_master.pptx'
+        },
+        {
+            id: 'ppt-master',
+            title: 'Presentación Maestra: Impacto Total',
+            description: 'La herramienta definitiva para comunicar nuestra visión. Diseñada para cautivar audiencias corporativas y transmitir autoridad.',
             format: 'PPTX',
             size: '12.5 MB',
-            image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800'
+            image: '/templates/thumb_master_v2.png',
+            webUrl: 'https://app.pitch.com/app/dashboard/6195b1fc-277e-4ef2-83b1-9315cdd23cd5/library/templates/ff00d0e3-0ef2-451e-a4aa-57a7caa11dae',
+            downloadUrl: '/templates/presentation_master.pptx'
         },
         {
-            id: 'ppt-2',
-            title: 'New Business Pitch',
-            description: 'Estructura persuasiva optimizada para ganar licitaciones. Enfoque en propuesta de valor y ROI.',
+            id: 'ppt-pitch',
+            title: 'Propuesta Comercial: Cierra el Trato',
+            description: 'Estructura persuasiva probada para ganar clientes. Convierte prospectos en aliados con una narrativa visual irresistible.',
             format: 'PPTX',
             size: '8.2 MB',
-            image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 'ppt-3',
-            title: 'Quarterly Report (QBR)',
-            description: 'Visualización de datos densa y clara para reportes de desempeño y métricas financieras.',
-            format: 'PPTX',
-            size: '15.0 MB',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+            image: '/templates/thumb_pitch_v2.png',
+            webUrl: 'https://app.pitch.com/app/dashboard/6195b1fc-277e-4ef2-83b1-9315cdd23cd5/library/templates/ff004676-1200-41b4-a263-deddabd44ad8',
+            downloadUrl: '/templates/presentation_pitch.pptx'
         }
     ];
 
     const docsCollection = [
         {
-            id: 'doc-1',
-            title: 'Official Letterhead',
-            description: 'Hoja membretada oficial para comunicaciones formales, cartas legales y comunicados de prensa.',
-            format: 'DOCX',
-            size: '240 KB',
-            image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800'
+            id: 'doc-birthday',
+            title: 'Tarjeta de Cumpleaños: Celebra con Estilo',
+            description: 'Diseño festivo para celebrar el cumpleaños de tu equipo. Personalizable y listo para compartir.',
+            format: 'Adobe Express',
+            size: '—',
+            image: '/templates/thumb_birthday.png', // User mentioned newsletter thumb specifically, let's update first in ordered list or wherever newsletter is
+            webUrl: 'https://new.express.adobe.com/design/userTemplate/urn:aaid:sc:US:8551ca1a-8f92-53a2-b5cb-1af815f531c8'
         },
         {
-            id: 'doc-2',
-            title: 'Client Invoice Template',
-            description: 'Formato de facturación limpio y profesional. Calcula totales automáticamente.',
-            format: 'XLSX',
-            size: '180 KB',
-            image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800'
+            id: 'doc-invoice',
+            title: 'Factura Profesional: Claridad Total',
+            description: 'Plantilla de facturación limpia y profesional para transacciones comerciales.',
+            format: 'Adobe Express',
+            size: '—',
+            image: '/templates/thumb_invoice.png',
+            webUrl: 'https://new.express.adobe.com/design/userTemplate/urn:aaid:sc:US:118b1c8e-1625-5929-a868-d5143dfee28c'
         },
         {
-            id: 'doc-3',
-            title: 'Scope of Work (SOW)',
-            description: 'Contrato estándar para definición de alcance, entregables y cronogramas de proyecto.',
-            format: 'DOCX',
-            size: '320 KB',
-            image: 'https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?auto=format&fit=crop&q=80&w=800'
+            id: 'doc-newsletter',
+            title: 'Newsletter Corporativo: Comunica con Impacto',
+            description: 'Boletín informativo diseñado para mantener a tu audiencia conectada y comprometida.',
+            format: 'Adobe Express',
+            size: '—',
+            image: '/templates/thumb_newsletter_v2.png',
+            webUrl: 'https://new.express.adobe.com/design/userTemplate/urn:aaid:sc:US:90d4ea9b-2734-5c2c-a5d9-1a52239f654f'
         }
     ];
 
@@ -176,25 +207,28 @@ const TemplatesView: React.FC = () => {
             id: 'soc-1',
             title: 'Instagram Stories Kit',
             description: 'Set de 15 layouts para stories: encuestas, lanzamientos, frases y behind-the-scenes.',
-            format: 'FIG',
-            size: '45 MB',
-            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
+            format: 'Adobe Express',
+            size: '—',
+            image: '/templates/thumb_newsletter.png',
+            webUrl: 'https://new.express.adobe.com/design/userTemplate/urn:aaid:sc:US:90d4ea9b-2734-5c2c-a5d9-1a52239f654f'
         },
         {
             id: 'soc-2',
             title: 'LinkedIn Thought Leader',
             description: 'Plantillas para carruseles educativos y artículos de opinión. Optimizadas para lectura en feed.',
-            format: 'FIG',
-            size: '32 MB',
-            image: 'https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&q=80&w=800'
+            format: 'Pitch',
+            size: '—',
+            image: '/templates/thumb_pitch.png',
+            webUrl: 'https://app.pitch.com/app/dashboard/6195b1fc-277e-4ef2-83b1-9315cdd23cd5/library/templates/ff004676-1200-41b4-a263-deddabd44ad8'
         },
         {
             id: 'soc-3',
             title: 'Quote Card Generator',
-            description: 'PSD inteligente para generar citas de portavoces con el tratamiento tipográfico correcto.',
-            format: 'PSD',
-            size: '120 MB',
-            image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&q=80&w=800'
+            description: 'Generador de citas para portavoces con el tratamiento tipográfico correcto.',
+            format: 'Adobe Express',
+            size: '—',
+            image: '/templates/thumb_invoice.png',
+            webUrl: 'https://new.express.adobe.com/design/userTemplate/urn:aaid:sc:US:118b1c8e-1625-5929-a868-d5143dfee28c'
         }
     ];
 
@@ -236,9 +270,9 @@ const TemplatesView: React.FC = () => {
 
             {/* Collection 2: Documents */}
             <CollectionSection
-                title="Institutional Core"
+                title="Documentos Esenciales"
                 subtitle="Documentos"
-                description="La columna vertebral operativa. Documentos que transmiten solidez y profesionalismo en cada transacción y comunicado oficial."
+                description="Plantillas profesionales para comunicación corporativa. Desde facturas hasta newsletters, todo lo que necesitás para mantener la consistencia de marca en cada documento."
                 icon={<FileText size={24} className="md:w-8 md:h-8" />}
                 items={docsCollection}
                 gradient="from-[#1534dc] to-[#f540ff]"
