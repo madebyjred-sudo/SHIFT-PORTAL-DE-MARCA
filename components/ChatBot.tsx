@@ -412,7 +412,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                   {messages.map((msg) => (
                     <div
                       key={msg.id}
-                      className={`flex items-end gap-3 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                      className={`flex items-end gap-3 w-full ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       {msg.role === 'model' && (
                         <div className="shrink-0 mb-1 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">
@@ -420,7 +420,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
                         </div>
                       )}
                       <div
-                        className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed backdrop-blur-md shadow-sm border relative group/msg ${msg.role === 'user'
+                        className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed backdrop-blur-md shadow-sm border relative group/msg break-words whitespace-pre-wrap ${msg.role === 'user'
                           ? 'bg-gradient-to-br from-secondary to-[#D900D9] text-white border-white/20 rounded-br-none shadow-[0_4px_15px_rgba(255,0,255,0.3)]'
                           : 'bg-white/10 text-white/90 border-white/10 rounded-bl-none shadow-[0_4px_15px_rgba(0,0,0,0.1)]'
                           }`}

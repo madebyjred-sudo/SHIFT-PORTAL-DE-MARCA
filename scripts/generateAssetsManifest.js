@@ -128,13 +128,16 @@ function generateManifest() {
                         size: 'N/A',
                         modified: new Date().toISOString(),
                         owner: 'Local',
-                        previewUrl: thumbPath,
-                        downloadUrl: svgPath || pngPath || thumbPath,
+                        previewUrl: thumbPath.replace(/ /g, '%20'),
+                        downloadUrl: (svgPath || pngPath || thumbPath).replace(/ /g, '%20'),
                         cloudUrl: null,
                         source: 'local',
                         category: collectionDirName,
                         tags: [collectionDirName, variantName],
-                        localPaths: { png: pngPath, svg: svgPath }
+                        localPaths: { 
+                            png: pngPath ? pngPath.replace(/ /g, '%20') : null, 
+                            svg: svgPath ? svgPath.replace(/ /g, '%20') : null 
+                        }
                     });
                     collectionItemCount++;
                 });
@@ -158,13 +161,16 @@ function generateManifest() {
                         size: 'N/A',
                         modified: new Date().toISOString(),
                         owner: 'Local',
-                        previewUrl: relativePath,
-                        downloadUrl: relativePath,
+                        previewUrl: relativePath.replace(/ /g, '%20'),
+                        downloadUrl: relativePath.replace(/ /g, '%20'),
                         cloudUrl: null,
                         source: 'local',
                         category: collectionDirName,
                         tags: [collectionDirName, variantName],
-                        localPaths: { png: ext === 'PNG' ? relativePath : null, svg: ext === 'SVG' ? relativePath : null }
+                        localPaths: { 
+                            png: ext === 'PNG' ? relativePath.replace(/ /g, '%20') : null, 
+                            svg: ext === 'SVG' ? relativePath.replace(/ /g, '%20') : null 
+                        }
                     });
                     collectionItemCount++;
                 });
@@ -174,7 +180,7 @@ function generateManifest() {
         collections.push({
             id: collectionDirName,
             title: collectionDirName === 'LOGO' ? 'System Logos' : collectionDirName,
-            coverVideoUrl: coverVideoUrl,
+            coverVideoUrl: coverVideoUrl ? coverVideoUrl.replace(/ /g, '%20') : null,
             coverImageUrl: null,
             itemCount: collectionItemCount,
             route: `/assets/${collectionDirName.toLowerCase()}`
