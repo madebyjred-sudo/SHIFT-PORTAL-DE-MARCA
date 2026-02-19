@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/shiftpn/shiftpn.com/brandhub/
+    - /bin/cp -R dist/* $DEPLOYPATH
