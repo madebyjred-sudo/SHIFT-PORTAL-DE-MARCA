@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Home, Layers, LayoutTemplate, Type, Settings, User, LogOut, Zap } from 'lucide-react';
+import { Home, Layers, LayoutTemplate, Type, User, LogOut, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ViewType } from '../types';
 import BrandLogo from './BrandLogo';
@@ -137,10 +137,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate, onOpenChat }
                     <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-20" />
                 </motion.button>
 
-                <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium text-gray-600 hover:bg-white/30 hover:text-primary transition-all">
-                    <Settings size={20} />
-                    Preferencias
-                </button>
+
             </nav>
 
             {/* User Profile Footer */}

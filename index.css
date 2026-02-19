@@ -26,6 +26,15 @@ body {
   color: #00235E;
 }
 
+@font-face {
+  font-family: 'ShiftSans';
+  src: url('/brand/fonts/ShiftSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@tailwind base;
+
 /* Typography Defaults based on Guidelines */
 h1,
 h2,

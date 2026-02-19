@@ -13,6 +13,7 @@ export default {
         sans: ['"Fira Sans"', 'sans-serif'],
         glitz: ['"Glitz"', 'sans-serif'],
         figtree: ['"Figtree"', 'sans-serif'],
+        shift: ['"ShiftSans"', 'sans-serif'],
         mozilla: ['"Fira Sans"', 'sans-serif'],
       },
       colors: {

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useDragControls } from 'framer-motion';
-import { X, Send, AudioWaveform, Mic, RotateCcw, ChevronDown, Sparkles, ArrowRight, ExternalLink, Paperclip, Copy, Check } from 'lucide-react';
+import { X, Send, AudioWaveform, Mic, RotateCcw, ChevronDown, Sparkles, ArrowRight, ExternalLink, Paperclip, Copy, Check, Wand2 } from 'lucide-react';
 import { GenerateContentResponse } from "@google/genai";
 import ReactMarkdown from 'react-markdown';
 import { sendMessageStream } from '../services/geminiService';
@@ -8,6 +8,7 @@ import { ShiftVoiceClient } from '../services/liveService';
 import { ChatMessage, ViewType } from '../types';
 import BrandLogo from './BrandLogo';
 import { ColorSwatch } from './ColorSwatch';
+import ShiftStudio from './ShiftStudio/ShiftStudio';
 
 interface ChatBotProps {
   isOpen: boolean;
@@ -31,6 +32,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [transcript, setTranscript] = useState("");
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [isStudioOpen, setIsStudioOpen] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatRef = useRef<HTMLDivElement>(null);
@@ -150,6 +152,13 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 
+    // Detect /visual command to open Studio
+    if (input.trim().toLowerCase() === '/visual' || input.trim().toLowerCase() === '/studio') {
+      setInput('');
+      setIsStudioOpen(true);
+      return;
+    }
+
     const userMessage: ChatMessage = { id: Date.now().toString(), role: 'user', text: input };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
@@ -259,7 +268,11 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
             }}
             exit={{ opacity: 0, y: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 md:inset-auto md:top-20 md:right-6 md:bottom-auto md:left-auto z-50 md:w-[400px] md:h-[650px] md:max-h-[80vh] flex flex-col overflow-hidden md:rounded-[2.5rem] md:border md:border-white/30 backdrop-blur-3xl md:shadow-[0_0_50px_-10px_rgba(255,0,255,0.4)] transition-colors duration-700"
+            style={{ paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)' }}
+            className={`fixed inset-0 z-50 flex flex-col overflow-hidden backdrop-blur-3xl transition-all duration-500 ${isStudioOpen
+              ? 'md:inset-auto md:top-[5vh] md:right-[5vw] md:bottom-auto md:left-auto md:w-[90vw] md:h-[85vh] md:max-w-[1400px] md:rounded-3xl md:border md:border-white/30 md:shadow-[0_0_80px_-10px_rgba(245,64,255,0.3)]'
+              : 'md:inset-auto md:top-20 md:right-6 md:bottom-auto md:left-auto md:w-[400px] md:h-[650px] md:max-h-[80vh] md:rounded-[2.5rem] md:border md:border-white/30 md:shadow-[0_0_50px_-10px_rgba(255,0,255,0.4)]'
+              }`}
           >
             {/* Decorative internal glows for liquid effect - Hidden in Voice Mode for clean gradient */}
             {!isVoiceMode && (
@@ -270,70 +283,85 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
             )}
 
             {/* Header - Safe area aware on mobile */}
-            <div className="relative z-10 p-4 pt-safe md:p-5 flex items-center justify-between text-white shrink-0 border-b border-white/10">
-              {/* Mobile Close Handle */}
-              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1 rounded-full bg-white/30 md:hidden" />
+            {!isStudioOpen && (
+              <div className="relative z-10 p-5 pt-safe md:pt-8 md:px-8 flex items-center justify-between text-white shrink-0 border-b border-white/10">
+                {/* Mobile Close Handle */}
+                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1 rounded-full bg-white/30 md:hidden" />
 
-              <div className="flex items-center gap-3 mt-2 md:mt-0">
-                <motion.div
-                  className="drop-shadow-[0_0_8px_rgba(255,0,255,0.8)]"
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <img src="/shift-reduced.svg" alt="Shift" className="h-7 w-auto brightness-0 invert" />
-                </motion.div>
-                <div>
-                  <h3 className="font-bold text-base tracking-wide text-white drop-shadow-md">Shifty</h3>
-                  <div className="flex items-center gap-1.5">
-                    {isVoiceMode && (
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                      </span>
-                    )}
-                    <p className="text-[11px] text-white/70 font-medium uppercase tracking-wider">
-                      {isVoiceMode ? 'Live Resonance' : 'Asistente de Marca'}
-                    </p>
+                <div className="flex items-center gap-3 mt-2 md:mt-0">
+                  <motion.div
+                    className="drop-shadow-[0_0_8px_rgba(255,0,255,0.8)]"
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <img src="/shift-reduced.svg" alt="Shift" className="h-7 w-auto brightness-0 invert" />
+                  </motion.div>
+                  <div>
+                    <h3 className="font-bold text-base tracking-wide text-white drop-shadow-md">Shifty</h3>
+                    <div className="flex items-center gap-1.5">
+                      {isVoiceMode && (
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                      )}
+                      <p className="text-[11px] text-white/70 font-medium uppercase tracking-wider">
+                        {isVoiceMode ? 'Live Resonance' : 'Asistente de Marca'}
+                      </p>
+                    </div>
                   </div>
                 </div>
+
+                <div className="flex items-center gap-1 mt-2 md:mt-0">
+                  {/* New Chat Button */}
+                  <motion.button
+                    onClick={startNewChat}
+                    whileTap={{ scale: 0.9, rotate: -180 }}
+                    className="p-2.5 hover:bg-white/10 rounded-full transition-colors group"
+                    title="Nuevo Chat"
+                  >
+                    <RotateCcw size={18} className="text-white/70 group-hover:text-white transition-colors" />
+                  </motion.button>
+
+                  {/* Studio Toggle Button */}
+                  <motion.button
+                    onClick={() => setIsStudioOpen(!isStudioOpen)}
+                    whileTap={{ scale: 0.9 }}
+                    className={`p-2.5 rounded-full transition-all duration-300 ${isStudioOpen
+                      ? 'bg-gradient-to-r from-[#1534dc] to-[#f540ff] text-white shadow-[0_0_15px_rgba(245,64,255,0.5)]'
+                      : 'hover:bg-white/10 text-white/80 hover:text-white'
+                      }`}
+                    title={isStudioOpen ? 'Cerrar Studio' : 'Shift Studio'}
+                  >
+                    <Wand2 size={16} />
+                  </motion.button>
+
+                  {/* Voice Toggle Button */}
+                  <motion.button
+                    onClick={toggleVoiceMode}
+                    whileTap={{ scale: 0.9 }}
+                    className={`p-2.5 rounded-full transition-all duration-300 ${isVoiceMode
+                      ? 'bg-white text-secondary hover:bg-white/90 shadow-[0_0_15px_rgba(255,255,255,0.5)]'
+                      : 'hover:bg-white/10 text-white/80 hover:text-white'
+                      }`}
+                    title={isVoiceMode ? "Salir de Modo Voz" : "Activar Modo Voz"}
+                  >
+                    {isVoiceMode ? <AudioWaveform size={18} className="animate-pulse" /> : <Mic size={18} />}
+                  </motion.button>
+
+                  <div className="w-px h-5 bg-white/20 mx-1" />
+
+                  {/* Close - Shows chevron on mobile, X on desktop */}
+                  <motion.button
+                    onClick={() => setIsOpen(false)}
+                    whileTap={{ scale: 0.9 }}
+                    className="p-2.5 hover:bg-white/10 rounded-full transition-colors group"
+                  >
+                    <ChevronDown size={20} className="text-white/70 group-hover:text-white md:hidden" />
+                    <X size={20} className="text-white/70 group-hover:text-white hidden md:block" />
+                  </motion.button>
+                </div>
               </div>
-
-              <div className="flex items-center gap-1 mt-2 md:mt-0">
-                {/* New Chat Button */}
-                <motion.button
-                  onClick={startNewChat}
-                  whileTap={{ scale: 0.9, rotate: -180 }}
-                  className="p-2.5 hover:bg-white/10 rounded-full transition-colors group"
-                  title="Nuevo Chat"
-                >
-                  <RotateCcw size={18} className="text-white/70 group-hover:text-white transition-colors" />
-                </motion.button>
-
-                {/* Voice Toggle Button */}
-                <motion.button
-                  onClick={toggleVoiceMode}
-                  whileTap={{ scale: 0.9 }}
-                  className={`p-2.5 rounded-full transition-all duration-300 ${isVoiceMode
-                    ? 'bg-white text-secondary hover:bg-white/90 shadow-[0_0_15px_rgba(255,255,255,0.5)]'
-                    : 'hover:bg-white/10 text-white/80 hover:text-white'
-                    }`}
-                  title={isVoiceMode ? "Salir de Modo Voz" : "Activar Modo Voz"}
-                >
-                  {isVoiceMode ? <AudioWaveform size={18} className="animate-pulse" /> : <Mic size={18} />}
-                </motion.button>
-
-                <div className="w-px h-5 bg-white/20 mx-1" />
-
-                {/* Close - Shows chevron on mobile, X on desktop */}
-                <motion.button
-                  onClick={() => setIsOpen(false)}
-                  whileTap={{ scale: 0.9 }}
-                  className="p-2.5 hover:bg-white/10 rounded-full transition-colors group"
-                >
-                  <ChevronDown size={20} className="text-white/70 group-hover:text-white md:hidden" />
-                  <X size={20} className="text-white/70 group-hover:text-white hidden md:block" />
-                </motion.button>
-              </div>
-            </div>
+            )}
             {/* Navigation Toast */}
             <AnimatePresence>
               {navToast && (
@@ -351,8 +379,15 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
               )}
             </AnimatePresence>
 
+            {/* Shift Studio Overlay */}
+            <AnimatePresence>
+              {isStudioOpen && (
+                <ShiftStudio onClose={() => setIsStudioOpen(false)} />
+              )}
+            </AnimatePresence>
+
             {/* Main Content Area */}
-            {isVoiceMode ? (
+            {isStudioOpen ? null : isVoiceMode ? (
               // --- VOICE MODE UI ---
               <div className="flex-1 flex flex-col items-center justify-center relative z-10 text-white p-8 text-center">
 
@@ -553,7 +588,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
 
 
                 {/* Input Area */}
-                <div className="relative z-10 p-5 pt-2 shrink-0 bg-gradient-to-t from-[#001030]/80 to-transparent">
+                <div className="relative z-10 p-5 pb-8 md:px-8 pt-2 shrink-0 bg-gradient-to-t from-[#001030]/80 to-transparent">
                   <div className="flex items-center gap-2 bg-black/40 backdrop-blur-xl rounded-2xl p-1.5 pr-2 border border-white/15 focus-within:border-white/30 focus-within:bg-black/50 transition-all shadow-inner">
                     {/* New Chat Action */}
                     <button
@@ -566,10 +601,14 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
 
                     {/* Upload File (Mock) */}
                     <button
-                      onClick={() => alert('Función de carga de archivos próximamente')}
-                      className="p-2 text-white/40 hover:text-white transition-colors"
+                      onClick={() => window.open('https://nanobanana.ai/studio?ref=shift-brand-hub', '_blank')}
+                      className="p-2 text-white/40 hover:text-[#f540ff] transition-colors group relative"
+                      title="Nano Banana Design Studio"
                     >
-                      <Paperclip size={18} />
+                      <Sparkles size={18} className="group-hover:drop-shadow-[0_0_8px_#f540ff]" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black/80 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10 pointer-events-none">
+                        Design Studio
+                      </span>
                     </button>
 
                     <input
@@ -595,7 +634,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen, showTrigger = true
             )}
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence >
     </>
   );
 };
