@@ -11,10 +11,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/1.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/1.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/1.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/1.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -23,7 +23,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/1.png",
+            "png": "/assets/ICONS/CONSULTING/1.png",
             "svg": null
         }
     },
@@ -36,10 +36,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/10.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/10.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/10.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/10.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -48,7 +48,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/10.png",
+            "png": "/assets/ICONS/CONSULTING/10.png",
             "svg": null
         }
     },
@@ -61,10 +61,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/11.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/11.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/11.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/11.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -73,7 +73,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/11.png",
+            "png": "/assets/ICONS/CONSULTING/11.png",
             "svg": null
         }
     },
@@ -86,10 +86,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/12.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/12.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/12.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/12.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -98,7 +98,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/12.png",
+            "png": "/assets/ICONS/CONSULTING/12.png",
             "svg": null
         }
     },
@@ -111,10 +111,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/13.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/13.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/13.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/13.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -123,7 +123,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/13.png",
+            "png": "/assets/ICONS/CONSULTING/13.png",
             "svg": null
         }
     },
@@ -136,10 +136,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/14.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/14.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/14.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/14.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -148,7 +148,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/14.png",
+            "png": "/assets/ICONS/CONSULTING/14.png",
             "svg": null
         }
     },
@@ -161,10 +161,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/15.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/15.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/15.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/15.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -173,7 +173,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/15.png",
+            "png": "/assets/ICONS/CONSULTING/15.png",
             "svg": null
         }
     },
@@ -186,10 +186,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/16.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/16.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/16.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/16.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -198,7 +198,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/16.png",
+            "png": "/assets/ICONS/CONSULTING/16.png",
             "svg": null
         }
     },
@@ -211,10 +211,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/17.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/17.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/17.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/17.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -223,7 +223,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/17.png",
+            "png": "/assets/ICONS/CONSULTING/17.png",
             "svg": null
         }
     },
@@ -236,10 +236,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/18.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/18.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/18.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/18.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -248,7 +248,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/18.png",
+            "png": "/assets/ICONS/CONSULTING/18.png",
             "svg": null
         }
     },
@@ -261,10 +261,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/19.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/19.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/19.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/19.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -273,7 +273,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/19.png",
+            "png": "/assets/ICONS/CONSULTING/19.png",
             "svg": null
         }
     },
@@ -286,10 +286,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/2.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/2.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/2.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/2.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -298,7 +298,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/2.png",
+            "png": "/assets/ICONS/CONSULTING/2.png",
             "svg": null
         }
     },
@@ -311,10 +311,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/3.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/3.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/3.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/3.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -323,7 +323,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/3.png",
+            "png": "/assets/ICONS/CONSULTING/3.png",
             "svg": null
         }
     },
@@ -336,10 +336,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/4.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/4.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/4.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/4.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -348,7 +348,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/4.png",
+            "png": "/assets/ICONS/CONSULTING/4.png",
             "svg": null
         }
     },
@@ -361,10 +361,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/5.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/5.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/5.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/5.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -373,7 +373,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/5.png",
+            "png": "/assets/ICONS/CONSULTING/5.png",
             "svg": null
         }
     },
@@ -386,10 +386,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/6.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/6.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/6.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/6.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -398,7 +398,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/6.png",
+            "png": "/assets/ICONS/CONSULTING/6.png",
             "svg": null
         }
     },
@@ -411,10 +411,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/7.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/7.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/7.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/7.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -423,7 +423,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/7.png",
+            "png": "/assets/ICONS/CONSULTING/7.png",
             "svg": null
         }
     },
@@ -436,10 +436,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/8.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/8.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/8.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/8.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -448,7 +448,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/8.png",
+            "png": "/assets/ICONS/CONSULTING/8.png",
             "svg": null
         }
     },
@@ -461,10 +461,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.867Z",
+        "modified": "2026-02-19T20:19:05.985Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/CONSULTING/9.png",
-        "downloadUrl": "/ASSETS/ICONS/CONSULTING/9.png",
+        "previewUrl": "/assets/ICONS/CONSULTING/9.png",
+        "downloadUrl": "/assets/ICONS/CONSULTING/9.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -473,7 +473,7 @@ export const localAssets: Asset[] = [
             "CONSULTING"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/CONSULTING/9.png",
+            "png": "/assets/ICONS/CONSULTING/9.png",
             "svg": null
         }
     },
@@ -486,10 +486,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/1.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/1.png",
+        "previewUrl": "/assets/ICONS/EXPERT/1.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/1.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -498,7 +498,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/1.png",
+            "png": "/assets/ICONS/EXPERT/1.png",
             "svg": null
         }
     },
@@ -511,10 +511,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/10.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/10.png",
+        "previewUrl": "/assets/ICONS/EXPERT/10.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/10.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -523,7 +523,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/10.png",
+            "png": "/assets/ICONS/EXPERT/10.png",
             "svg": null
         }
     },
@@ -536,10 +536,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/11.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/11.png",
+        "previewUrl": "/assets/ICONS/EXPERT/11.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/11.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -548,7 +548,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/11.png",
+            "png": "/assets/ICONS/EXPERT/11.png",
             "svg": null
         }
     },
@@ -561,10 +561,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/12.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/12.png",
+        "previewUrl": "/assets/ICONS/EXPERT/12.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/12.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -573,7 +573,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/12.png",
+            "png": "/assets/ICONS/EXPERT/12.png",
             "svg": null
         }
     },
@@ -586,10 +586,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/13.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/13.png",
+        "previewUrl": "/assets/ICONS/EXPERT/13.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/13.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -598,7 +598,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/13.png",
+            "png": "/assets/ICONS/EXPERT/13.png",
             "svg": null
         }
     },
@@ -611,10 +611,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/14.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/14.png",
+        "previewUrl": "/assets/ICONS/EXPERT/14.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/14.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -623,7 +623,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/14.png",
+            "png": "/assets/ICONS/EXPERT/14.png",
             "svg": null
         }
     },
@@ -636,10 +636,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/2.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/2.png",
+        "previewUrl": "/assets/ICONS/EXPERT/2.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/2.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -648,7 +648,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/2.png",
+            "png": "/assets/ICONS/EXPERT/2.png",
             "svg": null
         }
     },
@@ -661,10 +661,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/3.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/3.png",
+        "previewUrl": "/assets/ICONS/EXPERT/3.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/3.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -673,7 +673,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/3.png",
+            "png": "/assets/ICONS/EXPERT/3.png",
             "svg": null
         }
     },
@@ -686,10 +686,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/4.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/4.png",
+        "previewUrl": "/assets/ICONS/EXPERT/4.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/4.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -698,7 +698,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/4.png",
+            "png": "/assets/ICONS/EXPERT/4.png",
             "svg": null
         }
     },
@@ -711,10 +711,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/5.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/5.png",
+        "previewUrl": "/assets/ICONS/EXPERT/5.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/5.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -723,7 +723,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/5.png",
+            "png": "/assets/ICONS/EXPERT/5.png",
             "svg": null
         }
     },
@@ -736,10 +736,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/6.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/6.png",
+        "previewUrl": "/assets/ICONS/EXPERT/6.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/6.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -748,7 +748,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/6.png",
+            "png": "/assets/ICONS/EXPERT/6.png",
             "svg": null
         }
     },
@@ -761,10 +761,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/7.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/7.png",
+        "previewUrl": "/assets/ICONS/EXPERT/7.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/7.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -773,7 +773,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/7.png",
+            "png": "/assets/ICONS/EXPERT/7.png",
             "svg": null
         }
     },
@@ -786,10 +786,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/8.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/8.png",
+        "previewUrl": "/assets/ICONS/EXPERT/8.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/8.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -798,7 +798,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/8.png",
+            "png": "/assets/ICONS/EXPERT/8.png",
             "svg": null
         }
     },
@@ -811,10 +811,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/EXPERT/9.png",
-        "downloadUrl": "/ASSETS/ICONS/EXPERT/9.png",
+        "previewUrl": "/assets/ICONS/EXPERT/9.png",
+        "downloadUrl": "/assets/ICONS/EXPERT/9.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -823,7 +823,7 @@ export const localAssets: Asset[] = [
             "EXPERT"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/EXPERT/9.png",
+            "png": "/assets/ICONS/EXPERT/9.png",
             "svg": null
         }
     },
@@ -836,10 +836,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/1.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/1.png",
+        "previewUrl": "/assets/ICONS/GROWTH/1.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/1.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -848,7 +848,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/1.png",
+            "png": "/assets/ICONS/GROWTH/1.png",
             "svg": null
         }
     },
@@ -861,10 +861,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/10.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/10.png",
+        "previewUrl": "/assets/ICONS/GROWTH/10.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/10.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -873,7 +873,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/10.png",
+            "png": "/assets/ICONS/GROWTH/10.png",
             "svg": null
         }
     },
@@ -886,10 +886,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/11.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/11.png",
+        "previewUrl": "/assets/ICONS/GROWTH/11.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/11.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -898,7 +898,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/11.png",
+            "png": "/assets/ICONS/GROWTH/11.png",
             "svg": null
         }
     },
@@ -911,10 +911,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/12.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/12.png",
+        "previewUrl": "/assets/ICONS/GROWTH/12.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/12.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -923,7 +923,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/12.png",
+            "png": "/assets/ICONS/GROWTH/12.png",
             "svg": null
         }
     },
@@ -936,10 +936,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/13.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/13.png",
+        "previewUrl": "/assets/ICONS/GROWTH/13.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/13.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -948,7 +948,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/13.png",
+            "png": "/assets/ICONS/GROWTH/13.png",
             "svg": null
         }
     },
@@ -961,10 +961,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/14.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/14.png",
+        "previewUrl": "/assets/ICONS/GROWTH/14.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/14.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -973,7 +973,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/14.png",
+            "png": "/assets/ICONS/GROWTH/14.png",
             "svg": null
         }
     },
@@ -986,10 +986,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/15.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/15.png",
+        "previewUrl": "/assets/ICONS/GROWTH/15.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/15.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -998,7 +998,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/15.png",
+            "png": "/assets/ICONS/GROWTH/15.png",
             "svg": null
         }
     },
@@ -1011,10 +1011,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/16.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/16.png",
+        "previewUrl": "/assets/ICONS/GROWTH/16.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/16.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1023,7 +1023,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/16.png",
+            "png": "/assets/ICONS/GROWTH/16.png",
             "svg": null
         }
     },
@@ -1036,10 +1036,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/17.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/17.png",
+        "previewUrl": "/assets/ICONS/GROWTH/17.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/17.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1048,7 +1048,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/17.png",
+            "png": "/assets/ICONS/GROWTH/17.png",
             "svg": null
         }
     },
@@ -1061,10 +1061,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/18.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/18.png",
+        "previewUrl": "/assets/ICONS/GROWTH/18.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/18.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1073,7 +1073,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/18.png",
+            "png": "/assets/ICONS/GROWTH/18.png",
             "svg": null
         }
     },
@@ -1086,10 +1086,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/19.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/19.png",
+        "previewUrl": "/assets/ICONS/GROWTH/19.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/19.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1098,7 +1098,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/19.png",
+            "png": "/assets/ICONS/GROWTH/19.png",
             "svg": null
         }
     },
@@ -1111,10 +1111,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/2.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/2.png",
+        "previewUrl": "/assets/ICONS/GROWTH/2.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/2.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1123,7 +1123,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/2.png",
+            "png": "/assets/ICONS/GROWTH/2.png",
             "svg": null
         }
     },
@@ -1136,10 +1136,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/20.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/20.png",
+        "previewUrl": "/assets/ICONS/GROWTH/20.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/20.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1148,7 +1148,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/20.png",
+            "png": "/assets/ICONS/GROWTH/20.png",
             "svg": null
         }
     },
@@ -1161,10 +1161,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/21.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/21.png",
+        "previewUrl": "/assets/ICONS/GROWTH/21.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/21.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1173,7 +1173,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/21.png",
+            "png": "/assets/ICONS/GROWTH/21.png",
             "svg": null
         }
     },
@@ -1186,10 +1186,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/22.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/22.png",
+        "previewUrl": "/assets/ICONS/GROWTH/22.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/22.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1198,7 +1198,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/22.png",
+            "png": "/assets/ICONS/GROWTH/22.png",
             "svg": null
         }
     },
@@ -1211,10 +1211,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/3.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/3.png",
+        "previewUrl": "/assets/ICONS/GROWTH/3.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/3.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1223,7 +1223,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/3.png",
+            "png": "/assets/ICONS/GROWTH/3.png",
             "svg": null
         }
     },
@@ -1236,10 +1236,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/4.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/4.png",
+        "previewUrl": "/assets/ICONS/GROWTH/4.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/4.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1248,7 +1248,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/4.png",
+            "png": "/assets/ICONS/GROWTH/4.png",
             "svg": null
         }
     },
@@ -1261,10 +1261,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/5.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/5.png",
+        "previewUrl": "/assets/ICONS/GROWTH/5.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/5.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1273,7 +1273,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/5.png",
+            "png": "/assets/ICONS/GROWTH/5.png",
             "svg": null
         }
     },
@@ -1286,10 +1286,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/6.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/6.png",
+        "previewUrl": "/assets/ICONS/GROWTH/6.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/6.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1298,7 +1298,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/6.png",
+            "png": "/assets/ICONS/GROWTH/6.png",
             "svg": null
         }
     },
@@ -1311,10 +1311,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/7.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/7.png",
+        "previewUrl": "/assets/ICONS/GROWTH/7.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/7.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1323,7 +1323,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/7.png",
+            "png": "/assets/ICONS/GROWTH/7.png",
             "svg": null
         }
     },
@@ -1336,10 +1336,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/8.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/8.png",
+        "previewUrl": "/assets/ICONS/GROWTH/8.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/8.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1348,7 +1348,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/8.png",
+            "png": "/assets/ICONS/GROWTH/8.png",
             "svg": null
         }
     },
@@ -1361,10 +1361,10 @@ export const localAssets: Asset[] = [
             "PNG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/ICONS/GROWTH/9.png",
-        "downloadUrl": "/ASSETS/ICONS/GROWTH/9.png",
+        "previewUrl": "/assets/ICONS/GROWTH/9.png",
+        "downloadUrl": "/assets/ICONS/GROWTH/9.png",
         "cloudUrl": null,
         "source": "local",
         "category": "ICONS",
@@ -1373,7 +1373,7 @@ export const localAssets: Asset[] = [
             "GROWTH"
         ],
         "localPaths": {
-            "png": "/ASSETS/ICONS/GROWTH/9.png",
+            "png": "/assets/ICONS/GROWTH/9.png",
             "svg": null
         }
     },
@@ -1386,10 +1386,10 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/LOGO_MOTION_SHIFT.mp4",
-        "downloadUrl": "/ASSETS/LOGO/LOGO_MOTION_SHIFT.mp4",
+        "previewUrl": "/assets/LOGO/LOGO_MOTION_SHIFT.mp4",
+        "downloadUrl": "/assets/LOGO/LOGO_MOTION_SHIFT.mp4",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1412,10 +1412,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/1_TINTA/THUMBNAILS/PNG/logo-FULL_3.png",
-        "downloadUrl": "/ASSETS/LOGO/1_TINTA/SVG/logo-FULL.svg",
+        "previewUrl": "/assets/LOGO/1_TINTA/THUMBNAILS/PNG/logo-FULL_3.png",
+        "downloadUrl": "/assets/LOGO/1_TINTA/SVG/logo-FULL.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1424,8 +1424,8 @@ export const localAssets: Asset[] = [
             "1_TINTA"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/1_TINTA/PNG/logo-FULL.png",
-            "svg": "/ASSETS/LOGO/1_TINTA/SVG/logo-FULL.svg"
+            "png": "/assets/LOGO/1_TINTA/PNG/logo-FULL.png",
+            "svg": "/assets/LOGO/1_TINTA/SVG/logo-FULL.svg"
         }
     },
     {
@@ -1438,10 +1438,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/1_TINTA/THUMBNAILS/PNG/logo-compact_1.png",
-        "downloadUrl": "/ASSETS/LOGO/1_TINTA/SVG/logo-compact.svg",
+        "previewUrl": "/assets/LOGO/1_TINTA/THUMBNAILS/PNG/logo-compact_1.png",
+        "downloadUrl": "/assets/LOGO/1_TINTA/SVG/logo-compact.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1450,8 +1450,8 @@ export const localAssets: Asset[] = [
             "1_TINTA"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/1_TINTA/PNG/logo-compact.png",
-            "svg": "/ASSETS/LOGO/1_TINTA/SVG/logo-compact.svg"
+            "png": "/assets/LOGO/1_TINTA/PNG/logo-compact.png",
+            "svg": "/assets/LOGO/1_TINTA/SVG/logo-compact.svg"
         }
     },
     {
@@ -1464,10 +1464,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/1_TINTA/THUMBNAILS/PNG/logo-mark_1.png",
-        "downloadUrl": "/ASSETS/LOGO/1_TINTA/SVG/logo-mark.svg",
+        "previewUrl": "/assets/LOGO/1_TINTA/THUMBNAILS/PNG/logo-mark_1.png",
+        "downloadUrl": "/assets/LOGO/1_TINTA/SVG/logo-mark.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1476,8 +1476,8 @@ export const localAssets: Asset[] = [
             "1_TINTA"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/1_TINTA/PNG/logo-mark.png",
-            "svg": "/ASSETS/LOGO/1_TINTA/SVG/logo-mark.svg"
+            "png": "/assets/LOGO/1_TINTA/PNG/logo-mark.png",
+            "svg": "/assets/LOGO/1_TINTA/SVG/logo-mark.svg"
         }
     },
     {
@@ -1490,10 +1490,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/1_TINTA/THUMBNAILS/PNG/logo-reduced_3.png",
-        "downloadUrl": "/ASSETS/LOGO/1_TINTA/SVG/logo-reduced.svg",
+        "previewUrl": "/assets/LOGO/1_TINTA/THUMBNAILS/PNG/logo-reduced_3.png",
+        "downloadUrl": "/assets/LOGO/1_TINTA/SVG/logo-reduced.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1502,8 +1502,8 @@ export const localAssets: Asset[] = [
             "1_TINTA"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/1_TINTA/PNG/logo-reduced.png",
-            "svg": "/ASSETS/LOGO/1_TINTA/SVG/logo-reduced.svg"
+            "png": "/assets/LOGO/1_TINTA/PNG/logo-reduced.png",
+            "svg": "/assets/LOGO/1_TINTA/SVG/logo-reduced.svg"
         }
     },
     {
@@ -1516,10 +1516,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.868Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-FULL_3.png",
-        "downloadUrl": "/ASSETS/LOGO/2_TINTAS/SVG/logo-FULL.svg",
+        "previewUrl": "/assets/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-FULL_3.png",
+        "downloadUrl": "/assets/LOGO/2_TINTAS/SVG/logo-FULL.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1528,8 +1528,8 @@ export const localAssets: Asset[] = [
             "2_TINTAS"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/2_TINTAS/PNG/logo-FULL.png",
-            "svg": "/ASSETS/LOGO/2_TINTAS/SVG/logo-FULL.svg"
+            "png": "/assets/LOGO/2_TINTAS/PNG/logo-FULL.png",
+            "svg": "/assets/LOGO/2_TINTAS/SVG/logo-FULL.svg"
         }
     },
     {
@@ -1542,10 +1542,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-compact_1.png",
-        "downloadUrl": "/ASSETS/LOGO/2_TINTAS/SVG/logo-compact.svg",
+        "previewUrl": "/assets/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-compact_1.png",
+        "downloadUrl": "/assets/LOGO/2_TINTAS/SVG/logo-compact.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1554,8 +1554,8 @@ export const localAssets: Asset[] = [
             "2_TINTAS"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/2_TINTAS/PNG/logo-compact.png",
-            "svg": "/ASSETS/LOGO/2_TINTAS/SVG/logo-compact.svg"
+            "png": "/assets/LOGO/2_TINTAS/PNG/logo-compact.png",
+            "svg": "/assets/LOGO/2_TINTAS/SVG/logo-compact.svg"
         }
     },
     {
@@ -1568,10 +1568,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-mark_1.png",
-        "downloadUrl": "/ASSETS/LOGO/2_TINTAS/SVG/logo-mark.svg",
+        "previewUrl": "/assets/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-mark_1.png",
+        "downloadUrl": "/assets/LOGO/2_TINTAS/SVG/logo-mark.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1580,8 +1580,8 @@ export const localAssets: Asset[] = [
             "2_TINTAS"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/2_TINTAS/PNG/logo-mark.png",
-            "svg": "/ASSETS/LOGO/2_TINTAS/SVG/logo-mark.svg"
+            "png": "/assets/LOGO/2_TINTAS/PNG/logo-mark.png",
+            "svg": "/assets/LOGO/2_TINTAS/SVG/logo-mark.svg"
         }
     },
     {
@@ -1594,10 +1594,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-reduced_3.png",
-        "downloadUrl": "/ASSETS/LOGO/2_TINTAS/SVG/logo-reduced.svg",
+        "previewUrl": "/assets/LOGO/2_TINTAS/THUMBNAILS/PNG/logo-reduced_3.png",
+        "downloadUrl": "/assets/LOGO/2_TINTAS/SVG/logo-reduced.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1606,8 +1606,8 @@ export const localAssets: Asset[] = [
             "2_TINTAS"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/2_TINTAS/PNG/logo-reduced.png",
-            "svg": "/ASSETS/LOGO/2_TINTAS/SVG/logo-reduced.svg"
+            "png": "/assets/LOGO/2_TINTAS/PNG/logo-reduced.png",
+            "svg": "/assets/LOGO/2_TINTAS/SVG/logo-reduced.svg"
         }
     },
     {
@@ -1620,10 +1620,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/FULL_COLOR/THUMBNAILS/PNG/logo-FULL_2.png",
-        "downloadUrl": "/ASSETS/LOGO/FULL_COLOR/SVG/logo-FULL_1.svg",
+        "previewUrl": "/assets/LOGO/FULL_COLOR/THUMBNAILS/PNG/logo-FULL_2.png",
+        "downloadUrl": "/assets/LOGO/FULL_COLOR/SVG/logo-FULL_1.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1632,8 +1632,8 @@ export const localAssets: Asset[] = [
             "FULL_COLOR"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/FULL_COLOR/PNG/logo-FULL_1.png",
-            "svg": "/ASSETS/LOGO/FULL_COLOR/SVG/logo-FULL_1.svg"
+            "png": "/assets/LOGO/FULL_COLOR/PNG/logo-FULL_1.png",
+            "svg": "/assets/LOGO/FULL_COLOR/SVG/logo-FULL_1.svg"
         }
     },
     {
@@ -1646,10 +1646,10 @@ export const localAssets: Asset[] = [
             "SVG"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.986Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/LOGO/FULL_COLOR/THUMBNAILS/PNG/logo-reduced_2.png",
-        "downloadUrl": "/ASSETS/LOGO/FULL_COLOR/SVG/logo-reduced_1.svg",
+        "previewUrl": "/assets/LOGO/FULL_COLOR/THUMBNAILS/PNG/logo-reduced_2.png",
+        "downloadUrl": "/assets/LOGO/FULL_COLOR/SVG/logo-reduced_1.svg",
         "cloudUrl": null,
         "source": "local",
         "category": "LOGO",
@@ -1658,8 +1658,8 @@ export const localAssets: Asset[] = [
             "FULL_COLOR"
         ],
         "localPaths": {
-            "png": "/ASSETS/LOGO/FULL_COLOR/PNG/logo-reduced_1.png",
-            "svg": "/ASSETS/LOGO/FULL_COLOR/SVG/logo-reduced_1.svg"
+            "png": "/assets/LOGO/FULL_COLOR/PNG/logo-reduced_1.png",
+            "svg": "/assets/LOGO/FULL_COLOR/SVG/logo-reduced_1.svg"
         }
     },
     {
@@ -1671,10 +1671,10 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.987Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/MOTION/ESPIRAL_SHIFT_PN.mp4",
-        "downloadUrl": "/ASSETS/MOTION/ESPIRAL_SHIFT_PN.mp4",
+        "previewUrl": "/assets/MOTION/ESPIRAL_SHIFT_PN.mp4",
+        "downloadUrl": "/assets/MOTION/ESPIRAL_SHIFT_PN.mp4",
         "cloudUrl": null,
         "source": "local",
         "category": "MOTION",
@@ -1696,10 +1696,10 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.987Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/MOTION/LOGO_MOTION_SHIFT.mp4",
-        "downloadUrl": "/ASSETS/MOTION/LOGO_MOTION_SHIFT.mp4",
+        "previewUrl": "/assets/MOTION/LOGO_MOTION_SHIFT.mp4",
+        "downloadUrl": "/assets/MOTION/LOGO_MOTION_SHIFT.mp4",
         "cloudUrl": null,
         "source": "local",
         "category": "MOTION",
@@ -1721,10 +1721,10 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.987Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/MOTION/RESONANCIAmp4.mp4",
-        "downloadUrl": "/ASSETS/MOTION/RESONANCIAmp4.mp4",
+        "previewUrl": "/assets/MOTION/RESONANCIAmp4.mp4",
+        "downloadUrl": "/assets/MOTION/RESONANCIAmp4.mp4",
         "cloudUrl": null,
         "source": "local",
         "category": "MOTION",
@@ -1746,10 +1746,10 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.987Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/MOTION/TWIST_SHIFT_PN.mp4",
-        "downloadUrl": "/ASSETS/MOTION/TWIST_SHIFT_PN.mp4",
+        "previewUrl": "/assets/MOTION/TWIST_SHIFT_PN.mp4",
+        "downloadUrl": "/assets/MOTION/TWIST_SHIFT_PN.mp4",
         "cloudUrl": null,
         "source": "local",
         "category": "MOTION",
@@ -1771,10 +1771,10 @@ export const localAssets: Asset[] = [
             "MP4"
         ],
         "size": "N/A",
-        "modified": "2026-02-12T21:33:19.869Z",
+        "modified": "2026-02-19T20:19:05.987Z",
         "owner": "Local",
-        "previewUrl": "/ASSETS/MOTION/WAVES_SHIFT_PN.mp4",
-        "downloadUrl": "/ASSETS/MOTION/WAVES_SHIFT_PN.mp4",
+        "previewUrl": "/assets/MOTION/WAVES_SHIFT_PN.mp4",
+        "downloadUrl": "/assets/MOTION/WAVES_SHIFT_PN.mp4",
         "cloudUrl": null,
         "source": "local",
         "category": "MOTION",
@@ -1793,7 +1793,7 @@ export const localCollections: Collection[] = [
     {
         "id": "ICONS",
         "title": "ICONS",
-        "coverVideoUrl": "/ASSETS/ICONS/ICONSTHUMBNAIL.mp4",
+        "coverVideoUrl": "/assets/ICONS/ICONSTHUMBNAIL.mp4",
         "coverImageUrl": null,
         "itemCount": 55,
         "route": "/assets/icons"
@@ -1801,7 +1801,7 @@ export const localCollections: Collection[] = [
     {
         "id": "LOGO",
         "title": "System Logos",
-        "coverVideoUrl": "/ASSETS/LOGO/LOGO_MOTION_SHIFT.mp4",
+        "coverVideoUrl": "/assets/LOGO/LOGO_MOTION_SHIFT.mp4",
         "coverImageUrl": null,
         "itemCount": 11,
         "route": "/assets/logo"
@@ -1809,7 +1809,7 @@ export const localCollections: Collection[] = [
     {
         "id": "MOTION",
         "title": "MOTION",
-        "coverVideoUrl": "/ASSETS/MOTION/WAVES_SHIFT_PN.mp4",
+        "coverVideoUrl": "/assets/MOTION/WAVES_SHIFT_PN.mp4",
         "coverImageUrl": null,
         "itemCount": 5,
         "route": "/assets/motion"
