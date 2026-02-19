@@ -19,7 +19,7 @@ function getDirectories(source) {
 
 // Generate Manifest V5: Support for Multi-layer, Flat, and Root-level assets
 function generateManifest() {
-    const BASE_ASSETS_DIR = path.join(PUBLIC_DIR, 'assets');
+    const BASE_ASSETS_DIR = path.join(PUBLIC_DIR, 'ASSETS');
     if (!fs.existsSync(BASE_ASSETS_DIR)) {
         console.error(`Directory not found: ${BASE_ASSETS_DIR}`);
         return;
@@ -38,7 +38,7 @@ function generateManifest() {
         let videoFile = files.find(f => f.toUpperCase().includes('WAVES') && f.toLowerCase().endsWith('.mp4'));
         if (!videoFile) videoFile = files.find(f => f.toLowerCase().endsWith('.mp4'));
 
-        const coverVideoUrl = videoFile ? `/assets/${collectionDirName}/${videoFile}` : null;
+        const coverVideoUrl = videoFile ? `/ASSETS/${collectionDirName}/${videoFile}` : null;
 
         // 2. Scan for individual assets (either in subdirs or root)
         const subDirs = getDirectories(collectionPath);
@@ -57,7 +57,7 @@ function generateManifest() {
                 // Let's list it if it's in MOTION.
                 const fileNameNoExt = path.parse(file).name;
                 const cleanName = fileNameNoExt.replace(/[-_]/g, ' ');
-                const relativePath = `/assets/${collectionDirName}/${file}`;
+                const relativePath = `/ASSETS/${collectionDirName}/${file}`;
 
                 allAssets.push({
                     id: `local-${collectionDirName}-root-${fileNameNoExt}`.replace(/\s+/g, '-'),
@@ -103,7 +103,7 @@ function generateManifest() {
                         const pngFiles = fs.readdirSync(pngDir);
                         const match = pngFiles.find(f => path.parse(f).name === cleanName) ||
                             pngFiles.find(f => path.parse(f).name.startsWith(cleanName));
-                        if (match) pngPath = path.join('/assets', collectionDirName, variantName, 'PNG', match);
+                        if (match) pngPath = path.join('/ASSETS', collectionDirName, variantName, 'PNG', match);
                     }
 
                     let svgPath = null;
@@ -111,10 +111,10 @@ function generateManifest() {
                         const svgFiles = fs.readdirSync(svgDir);
                         const svgMatch = svgFiles.find(f => path.parse(f).name === cleanName) ||
                             svgFiles.find(f => path.parse(f).name.startsWith(cleanName));
-                        if (svgMatch) svgPath = path.join('/assets', collectionDirName, variantName, 'SVG', svgMatch);
+                        if (svgMatch) svgPath = path.join('/ASSETS', collectionDirName, variantName, 'SVG', svgMatch);
                     }
 
-                    const thumbPath = path.join('/assets', collectionDirName, variantName, 'THUMBNAILS/PNG', thumbFile);
+                    const thumbPath = path.join('/ASSETS', collectionDirName, variantName, 'THUMBNAILS/PNG', thumbFile);
                     const availableFormats = [];
                     if (pngPath) availableFormats.push('PNG');
                     if (svgPath) availableFormats.push('SVG');
@@ -150,7 +150,7 @@ function generateManifest() {
                 images.forEach(imageFile => {
                     const fileNameNoExt = path.parse(imageFile).name;
                     const ext = path.extname(imageFile).substring(1).toUpperCase();
-                    const relativePath = path.join('/assets', collectionDirName, variantName, imageFile);
+                    const relativePath = path.join('/ASSETS', collectionDirName, variantName, imageFile);
 
                     allAssets.push({
                         id: `local-${collectionDirName}-${variantName}-${fileNameNoExt}`.replace(/\s+/g, '-'),

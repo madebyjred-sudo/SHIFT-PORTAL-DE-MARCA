@@ -86,7 +86,7 @@ const HomeHub: React.FC<HomeHubProps> = ({ onNavigate, onOpenChat }) => {
                                     >
                                         <div className="whitespace-nowrap inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-xs font-bold text-white uppercase tracking-wider shadow-lg">
                                             <Zap size={12} className="fill-current text-secondary" />
-                                            Hub de Marca V.3.0
+                                            Hub de Marca v2.0
                                         </div>
                                     </motion.div>
                                 )}

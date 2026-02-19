@@ -80,7 +80,7 @@ export const MOCK_ASSETS = [
     type: 'logo',
     format: 'SVG',
     size: '12KB',
-    previewUrl: '/assets/LOGO/FULL COLOR/SVG/logo-FULL_1.svg',
+    previewUrl: '/ASSETS/LOGO/FULL COLOR/SVG/logo-FULL_1.svg',
   },
   {
     id: '2',
@@ -88,7 +88,7 @@ export const MOCK_ASSETS = [
     type: 'logo',
     format: 'PNG',
     size: '240KB',
-    previewUrl: '/assets/LOGO/1 TINTA/SVG/logo-reduced.svg',
+    previewUrl: '/ASSETS/LOGO/1 TINTA/SVG/logo-reduced.svg',
   },
   {
     id: '3',
@@ -96,7 +96,7 @@ export const MOCK_ASSETS = [
     type: 'video',
     format: 'MP4',
     size: '15MB',
-    previewUrl: '/assets/MOTION/RESONANCIAmp4.mp4',
+    previewUrl: '/ASSETS/MOTION/RESONANCIAmp4.mp4',
   },
   {
     id: '4',
@@ -112,7 +112,7 @@ export const MOCK_ASSETS = [
     type: 'icon',
     format: 'SVG',
     size: '1.2MB',
-    previewUrl: '/assets/ICONS/CONSULTING/1.png',
+    previewUrl: '/ASSETS/ICONS/CONSULTING/1.png',
   },
   {
     id: '6',
